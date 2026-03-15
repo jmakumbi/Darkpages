@@ -1,0 +1,339 @@
+{{ define "main" }}
+<style>
+  /* ── Header Band ── */
+  .ll-header {
+    background: var(--color-bg-dark);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .ll-series {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .ll-title {
+    font-family: var(--font-heading) !important;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--color-text-inv) !important;
+    line-height: 1.2;
+    margin: 0 0 0.75rem;
+    font-weight: 700;
+  }
+  .ll-subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    opacity: 0.6;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Disclosure Banner ── */
+  .ll-disclosure {
+    max-width: var(--max-width);
+    margin: 2rem auto 0;
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--color-accent);
+    background: rgba(69, 15, 0, 0.85);
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--color-text-inv);
+    opacity: 0.9;
+    line-height: 1.5;
+  }
+
+  /* ── Reading Column ── */
+  .ll-body {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+  }
+  .ll-body h2 {
+    font-family: var(--font-heading);
+    color: var(--color-bg-dark) !important;
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .ll-body h2::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: var(--color-accent);
+    margin-bottom: 0.5rem;
+  }
+  .ll-body h3 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--color-bg-dark) !important;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .ll-body p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+  .ll-body a {
+    color: var(--color-accent) !important;
+    text-decoration: none;
+  }
+  .ll-body a:hover {
+    text-decoration: underline;
+    color: var(--color-bg-dark) !important;
+  }
+  .ll-body ul, .ll-body ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .ll-body li {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 0.35rem;
+  }
+  .ll-body code {
+    font-family: var(--font-mono);
+    background: var(--color-bg-dark);
+    color: var(--color-text-inv);
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+    font-size: 0.88em;
+  }
+  .ll-body pre {
+    background: var(--color-bg-dark);
+    color: var(--color-text-inv);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 1.25rem;
+  }
+  .ll-body pre code {
+    background: none;
+    padding: 0;
+    font-size: 0.85rem;
+  }
+  .ll-body strong {
+    font-weight: 600;
+  }
+  .ll-body blockquote {
+    border-left: 3px solid var(--color-accent);
+    margin: 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background: var(--color-card);
+    border-radius: 0 4px 4px 0;
+    font-style: italic;
+  }
+
+  /* ── Gallery Grid ── */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  @media (min-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* ── Gallery Item ── */
+  .gallery-item {
+    background: var(--color-card);
+    border: 1px solid rgba(69, 15, 0, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0;
+  }
+  .gallery-item a {
+    display: block;
+  }
+  .gallery-item picture {
+    display: block;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .gallery-item figcaption {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--color-text);
+    opacity: 0.7;
+    line-height: 1.45;
+  }
+
+  /* ── Lightbox ── */
+  .lightbox {
+    display: none;
+  }
+  .lightbox:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    z-index: 999;
+  }
+  .lightbox img {
+    max-width: 92vw;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+  .lb-close {
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
+    color: var(--color-text-inv) !important;
+    font-size: 1.5rem;
+    text-decoration: none !important;
+    z-index: 1000;
+    line-height: 1;
+  }
+
+  /* ── Spec Table ── */
+  .ll-body .table-wrap {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+  .ll-body table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .ll-body thead tr {
+    background: var(--color-bg-dark);
+  }
+  .ll-body thead th {
+    color: var(--color-text-inv);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.5rem 0.85rem;
+    text-align: left;
+    font-weight: 600;
+  }
+  .ll-body tbody tr:nth-child(odd) {
+    background: var(--color-bg);
+  }
+  .ll-body tbody tr:nth-child(even) {
+    background: var(--color-card);
+  }
+  .ll-body td {
+    padding: 0.45rem 0.85rem;
+    vertical-align: top;
+    font-size: 0.9rem;
+  }
+  .ll-body td:first-child {
+    font-weight: 600;
+    color: var(--color-bg-dark);
+    width: 38%;
+  }
+
+  /* ── Callout ── */
+  .callout {
+    border-left: 3px solid var(--color-accent);
+    background: var(--color-card);
+    padding: 0.75rem 1rem;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+  }
+
+  /* ── Meta Footer ── */
+  .ll-meta {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem 2rem;
+    border-top: 2px solid rgba(69, 15, 0, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .ll-meta-date {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--color-text);
+    opacity: 0.5;
+  }
+  .ll-meta-tags {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--color-accent);
+  }
+
+  /* ── Mobile adjustments ── */
+  @media (max-width: 767px) {
+    .ll-header {
+      padding: 2rem 1rem 1.5rem;
+    }
+    .ll-title {
+      font-size: clamp(1.6rem, 6vw, 2rem);
+    }
+    .ll-body {
+      padding: 1.5rem 1rem 2rem;
+    }
+    .ll-body table {
+      font-size: 0.8rem;
+    }
+    .ll-body td {
+      padding: 0.35rem 0.5rem;
+    }
+    .ll-meta {
+      padding: 0.75rem 1rem 2rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .ll-body {
+      padding: 2rem 2rem 3rem;
+    }
+    .ll-disclosure {
+      margin-top: 2.5rem;
+    }
+  }
+</style>
+
+<!-- Header Band -->
+<header class="ll-header">
+  {{ with .Params.series }}
+    <span class="ll-series">series: {{ . }}</span>
+  {{ end }}
+  <h1 class="ll-title">{{ .Title }}</h1>
+  {{ with .Params.subtitle }}
+    <span class="ll-subtitle">{{ . }}</span>
+  {{ end }}
+</header>
+
+<!-- Disclosure Banner -->
+{{ if .Params.disclosure }}
+<div class="ll-disclosure">
+  {{ .Params.disclosure_text | default "This product was provided for review. The manufacturer has not read or influenced this content." }}
+</div>
+{{ end }}
+
+<!-- Reading Column -->
+<article class="ll-body">
+  {{ .Content }}
+</article>
+
+<!-- Meta Footer -->
+<footer class="ll-meta">
+  <span class="ll-meta-date">{{ .Date.Format "2 January 2006" }}</span>
+  {{ with .Params.tags }}
+    <span class="ll-meta-tags">{{ delimit . " · " }}</span>
+  {{ end }}
+</footer>
+
+{{ end }}

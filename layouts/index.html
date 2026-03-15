@@ -1,0 +1,59 @@
+{{ define "main" }}
+<style>
+  .gate-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-dark);
+    padding: 2rem;
+    text-align: center;
+  }
+  .gate-rule {
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--color-accent);
+    margin: 0 auto 2rem;
+  }
+  .gate-headline {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--color-text-inv);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  .gate-sub {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--color-text-inv);
+    opacity: 0.75;
+    max-width: 420px;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+  }
+  .gate-domain {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    opacity: 0.6;
+    letter-spacing: 0.08em;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+</style>
+
+<div class="gate-wrapper">
+  <span class="gate-rule"></span>
+  <h1 class="gate-headline">Members only.</h1>
+  <p class="gate-sub">
+    If you're looking for something,<br>
+    you already have the link.
+  </p>
+  <span class="gate-domain">billableonline.co</span>
+</div>
+{{ end }}
