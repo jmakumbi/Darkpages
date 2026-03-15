@@ -23,6 +23,20 @@
     margin: 0 0 0.75rem;
     font-weight: 700;
   }
+  .ll-byline {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-text-inv);
+    opacity: 0.7;
+    margin-top: 1rem;
+    display: block;
+  }
+  .ll-byline-date {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    opacity: 0.5;
+    margin-left: 0.25rem;
+  }
   .ll-subtitle {
     font-family: var(--font-mono);
     font-size: 0.8rem;
@@ -313,6 +327,9 @@
   <h1 class="ll-title">{{ .Title }}</h1>
   {{ with .Params.subtitle }}
     <span class="ll-subtitle">{{ . }}</span>
+  {{ end }}
+  {{ with .Params.author }}
+    <span class="ll-byline">by {{ . }}<span class="ll-byline-date"> · {{ $.Date.Format "2 January 2006" }}</span></span>
   {{ end }}
 </header>
 

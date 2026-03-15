@@ -61,6 +61,7 @@ description: "One sentence for Open Graph."
 slug: "url-slug"
 url: "/url-slug/"
 noindex: true
+author: "James Makumbi"
 subtitle: "Optional subtitle"
 series: "optional-series-slug"
 toc: false
