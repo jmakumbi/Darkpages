@@ -1,0 +1,30 @@
+{{ $src := .Get "src" }}
+{{ $caption := .Get "caption" }}
+{{ $id := .Get "id" }}
+{{ $img := .Page.Resources.GetMatch $src }}
+{{ if $img }}
+  {{ $thumbWebp := $img.Fill "1400x1050 Smart webp q82" }}
+  {{ $thumbJpeg := $img.Fill "1400x1050 Smart jpg q76" }}
+  {{ $fullWebp := $img.Resize "1400x webp q82" }}
+  {{ $fullJpeg := $img.Resize "1400x jpg q76" }}
+  <figure class="gallery-item">
+    <a href="#{{ $id }}">
+      <picture>
+        <source srcset="{{ $thumbWebp.RelPermalink }}" type="image/webp">
+        <img src="{{ $thumbJpeg.RelPermalink }}"
+             alt="{{ $caption }}"
+             width="{{ $thumbJpeg.Width }}"
+             height="{{ $thumbJpeg.Height }}"
+             loading="lazy">
+      </picture>
+    </a>
+    <figcaption>{{ $caption }}</figcaption>
+  </figure>
+  <div id="{{ $id }}" class="lightbox">
+    <a href="#" class="lb-close">&#10005;</a>
+    <picture>
+      <source srcset="{{ $fullWebp.RelPermalink }}" type="image/webp">
+      <img src="{{ $fullJpeg.RelPermalink }}" alt="{{ $caption }}">
+    </picture>
+  </div>
+{{ end }}

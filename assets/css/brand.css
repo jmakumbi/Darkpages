@@ -1,0 +1,32 @@
+:root {
+  --color-bg:       #d6cdb8;
+  --color-bg-dark:  #450f00;
+  --color-accent:   #c47a22;
+  --color-text:     #1a0800;
+  --color-text-inv: #d6cdb8;
+  --color-card:     #e8e2d4;
+  --font-heading:   'Playfair Display', Georgia, serif;
+  --font-body:      'Source Sans 3', system-ui, sans-serif;
+  --font-mono:      'JetBrains Mono', 'Courier New', monospace;
+  --max-width:      760px;
+  --max-width-wide: 1100px;
+}
+
+body {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text) !important;
+  font-family: var(--font-body) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  color: var(--color-bg-dark) !important;
+}
+
+a { color: var(--color-accent) !important; }
+a:hover { color: var(--color-bg-dark) !important; }
+code, pre { font-family: var(--font-mono) !important; }
+
+/* Suppress the theme navbar and footer completely */
+#navbar, nav.navbar, .navbar { display: none !important; }
+footer.footer, #footer { display: none !important; }

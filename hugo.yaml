@@ -1,0 +1,64 @@
+baseURL: "https://billableonline.co/"
+title: "billableonline.co"
+languageCode: "en-gb"
+theme: "hugo-profile"
+
+enableRobotsTXT: false
+
+disableKinds:
+  - taxonomy
+  - term
+  - RSS
+  - sitemap
+
+outputs:
+  home:
+    - HTML
+  page:
+    - HTML
+  section:
+    - HTML
+
+menu:
+  main: []
+
+params:
+  title: "billableonline.co"
+  description: ""
+  favicon: ""
+  useBootstrapCDN: false
+  animate: false
+  theme:
+    defaultTheme: "light"
+    disableThemeToggle: true
+  color:
+    primaryColor: "#c47a22"
+
+  hero:
+    enable: false
+  about:
+    enable: false
+  skills:
+    enable: false
+  experience:
+    enable: false
+  education:
+    enable: false
+  achievements:
+    enable: false
+  projects:
+    enable: false
+  contact:
+    enable: false
+
+  navbar:
+    disableSearch: true
+    stickyNavBar:
+      enable: false
+    menus:
+      disableAbout: true
+      disableExperience: true
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
+      disableContact: true
