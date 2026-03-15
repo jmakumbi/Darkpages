@@ -9,7 +9,7 @@ url: "/zimacube-2-pro-unboxing/"
 noindex: true
 subtitle: "IceWhale Technology · Review Unit"
 series: "zimacube-2-pro"
-author: "James Makumbi"
+author: "James S. K. Makumbi"
 toc: false
 disclosure: true
 disclosure_text: "I received this device for review and testing from IceWhale Technology. They have not read this post and have no influence on its content."
