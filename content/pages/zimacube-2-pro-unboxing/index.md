@@ -26,7 +26,7 @@ tags:
 
 The ZimaCube 2 comes in three variants. All share the same chassis (240 × 221 × 220 mm) and power supply (19V 13A, 247W rated):
 
-- **ZimaCube 2** (standard): Intel Core i3-N215U (6 cores, up to 4.40 GHz), 8GB DDR5, 256GB onboard NVMe, 2× 2.5GbE. Silver.
+- **ZimaCube 2** (standard): Intel Core i3-1215U (6 cores, up to 4.40 GHz), 8GB DDR5, 256GB onboard NVMe, 2× 2.5GbE. Silver.
 - **ZimaCube 2 Pro**: Intel Core i5-1235U (10 cores, up to 4.40 GHz), 16GB DDR5 4800 MT/s (2×8GB, upgradeable to 64GB), 256GB onboard NVMe, 10GbE + 2× 2.5GbE. Black.
 - **ZimaCube 2 Creator Pack**: Same i5-1235U, 64GB DDR5 (2×32GB), 1TB onboard NVMe, adds NVIDIA RTX PRO 2000 GPU. Black.
 
@@ -117,7 +117,7 @@ Two 80mm fans at the rear eject hot air from the drive bay section. The side pan
 
 ### PCIe Expansion
 
-Two slots accessible via the top panel: 1× PCIe x16 (Gen 4.0, 8GB/s) and 1× PCIe x8 (Gen 3.0, 2GB/s). Supports SFF GPU cards, AI accelerators, U.2 adapters, and additional SSD expansion. The i5-1235U brings 20 PCIe lanes to the table, which is exactly why the Pro version exists — the standard ZimaCube 2's i3-N215U shares the N100's lane constraints.
+Two slots accessible via the top panel: 1× PCIe x16 (Gen 4.0, 8GB/s) and 1× PCIe x8 (Gen 3.0, 2GB/s). Supports SFF GPU cards, AI accelerators, U.2 adapters, and additional SSD expansion. The i5-1235U brings 20 PCIe lanes to the table, which is exactly why the Pro version exists — the standard ZimaCube 2's i3-1215U shares the N100's lane constraints.
 
 ## Specifications
 
