@@ -6,9 +6,9 @@ A Hugo static site vault — standalone, unlinked pages deployed to GitHub Pages
 
 ## Quick Reference
 
-- **Hugo extended** is required. Binary path (if not on PATH): `C:/Users/jmaku/AppData/Local/Microsoft/WinGet/Packages/Hugo.Hugo.Extended_Microsoft.Winget.Source_8wekyb3d8bbwe/hugo.exe`
-- **Python 3.12** for EXIF stripping: `C:/Users/jmaku/AppData/Local/Programs/Python/Python312/python.exe`
-- **GitHub CLI**: `D:/Program Files/GitHub CLI/gh.exe`
+- **Hugo extended** is required (install via `winget install Hugo.Hugo.Extended` or equivalent)
+- **Python 3.12+** with **Pillow** for EXIF stripping (`pip install Pillow`)
+- **GitHub CLI** (`gh`)
 - **Dev server**: `hugo server` → http://localhost:1313/
 - **Build**: `hugo --minify` (must produce zero errors, zero warnings)
 - **Deploy**: push to `main` → GitHub Actions builds with `actions/deploy-pages` in ~60s
