@@ -320,6 +320,120 @@
     line-height: 1.4;
   }
 
+  /* ── Callout Highlight ── */
+  .callout-highlight {
+    border-left: 4px solid var(--color-accent);
+    background: rgba(196, 122, 34, 0.07);
+    padding: 0.75rem 1rem;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.95rem;
+    font-style: italic;
+    margin: 1.5rem 0;
+    line-height: 1.6;
+  }
+  .callout-highlight p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+
+  /* ── Feature Table ── */
+  .feature-table {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+
+  /* ── CTA Block ── */
+  .cta-block {
+    background: var(--color-bg-dark);
+    padding: 2rem;
+    border-radius: 4px;
+    margin-top: 3rem;
+  }
+  .cta-block h2 {
+    font-family: var(--font-heading) !important;
+    color: var(--color-text-inv) !important;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+  .cta-block h2::before {
+    display: none !important;
+  }
+  .cta-block p {
+    color: var(--color-text-inv);
+    opacity: 0.9;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+  .cta-block a {
+    font-family: var(--font-mono);
+    color: var(--color-accent) !important;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .cta-block a:hover {
+    text-decoration: underline;
+  }
+  .cta-block .cta-note {
+    opacity: 0.7;
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+
+  /* ── Stat Strip ── */
+  .stat-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  @media (min-width: 768px) {
+    .stat-strip {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .stat-tile {
+    background: var(--color-bg-dark);
+    padding: 1rem 1.25rem;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .stat-tile .stat-num {
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    color: var(--color-accent);
+    display: block;
+    line-height: 1.2;
+  }
+  .stat-tile .stat-label {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    color: var(--color-text-inv);
+    opacity: 0.75;
+    display: block;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Governance Badges ── */
+  .gov-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+  }
+  .gov-badge {
+    background: var(--color-bg-dark);
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 3px;
+    border: 1px solid rgba(196, 122, 34, 0.4);
+  }
+
   /* ── Domain Stamp ── */
   .ar-stamp {
     text-align: center;

@@ -1,0 +1,284 @@
+{{ define "main" }}
+<style>
+  /* ── Header Band ── */
+  .sv-header {
+    background: var(--color-bg-dark);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .sv-title {
+    font-family: var(--font-heading) !important;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    color: var(--color-text-inv) !important;
+    line-height: 1.2;
+    margin: 0 0 0.75rem;
+    font-weight: 700;
+  }
+  .sv-subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    opacity: 0.6;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+  .sv-header-rule {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: var(--color-accent);
+    margin: 0 auto;
+  }
+
+  /* ── Reading Column ── */
+  .sv-body {
+    max-width: var(--max-width-wide);
+    margin: 0 auto;
+    padding: 2.5rem 2rem 3rem;
+  }
+
+  /* ── Intro text ── */
+  .sv-body > p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+    max-width: var(--max-width);
+  }
+
+  /* ── Section headings ── */
+  .sv-body h2 {
+    font-family: var(--font-heading);
+    color: var(--color-bg-dark) !important;
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  .sv-body h2::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: var(--color-accent);
+    margin-bottom: 0.5rem;
+  }
+  .sv-body h3 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-bg-dark) !important;
+    margin: 0 0 0.4rem;
+  }
+  .sv-body p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+  .sv-body ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .sv-body li {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 0.3rem;
+  }
+  .sv-body strong {
+    font-weight: 600;
+  }
+  .sv-body a {
+    color: var(--color-accent) !important;
+    text-decoration: none;
+  }
+  .sv-body a:hover {
+    text-decoration: underline;
+  }
+
+  /* ── Platform context paragraph ── */
+  .platform-note {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--color-text);
+    opacity: 0.75;
+    margin-bottom: 1.5rem;
+    max-width: var(--max-width);
+  }
+
+  /* ── Service Card Grid ── */
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+  }
+  @media (min-width: 640px) {
+    .service-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .service-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* ── Service Card ── */
+  .service-card {
+    background: var(--color-card);
+    border: 1px solid rgba(69, 15, 0, 0.12);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .service-card .card-rule {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: var(--color-accent);
+    margin-bottom: 1rem;
+  }
+  .service-card .card-title {
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--color-bg-dark);
+    font-size: 1rem;
+    margin: 0 0 0.4rem;
+  }
+  .service-card .card-body {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    opacity: 0.85;
+    margin: 0;
+  }
+
+  /* ── Credentials Strip ── */
+  .credentials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0 1.5rem;
+  }
+  .credential-pill {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-accent);
+    background: var(--color-bg-dark);
+    padding: 0.25rem 0.6rem;
+    border-radius: 2px;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+
+  /* ── CTA / Contact Block ── */
+  .cta-block {
+    background: var(--color-bg-dark);
+    padding: 2rem;
+    border-radius: 4px;
+    margin-top: 3rem;
+  }
+  .cta-block h2 {
+    font-family: var(--font-heading) !important;
+    color: var(--color-text-inv) !important;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+  .cta-block h2::before {
+    display: none;
+  }
+  .cta-block p {
+    font-family: var(--font-body);
+    color: var(--color-text-inv);
+    opacity: 0.9;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+  .cta-block .cta-note {
+    font-style: italic;
+    opacity: 0.7;
+    font-size: 0.88rem;
+  }
+  .cta-block a {
+    font-family: var(--font-mono);
+    color: var(--color-accent) !important;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .cta-block a:hover {
+    text-decoration: underline;
+  }
+
+  /* ── Meta Footer ── */
+  .sv-meta {
+    max-width: var(--max-width-wide);
+    margin: 0 auto;
+    padding: 0.75rem 2rem 2rem;
+    border-top: 2px solid rgba(69, 15, 0, 0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .sv-meta-date {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--color-text);
+    opacity: 0.5;
+  }
+  .sv-meta-tags {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--color-accent);
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 767px) {
+    .sv-header {
+      padding: 2rem 1rem 1.5rem;
+    }
+    .sv-title {
+      font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+    .sv-body {
+      padding: 1.5rem 1rem 2rem;
+    }
+    .sv-meta {
+      padding: 0.75rem 1rem 2rem;
+    }
+    .cta-block {
+      padding: 1.5rem 1.25rem;
+    }
+  }
+</style>
+
+<!-- Header Band -->
+<header class="sv-header">
+  <h1 class="sv-title">{{ .Title }}</h1>
+  {{ with .Params.subtitle }}
+    <span class="sv-subtitle">{{ . }}</span>
+  {{ end }}
+  <span class="sv-header-rule"></span>
+</header>
+
+<!-- Services Body -->
+<div class="sv-body">
+  {{ .Content }}
+</div>
+
+<!-- Meta Footer -->
+<footer class="sv-meta">
+  <span class="sv-meta-date">{{ .Date.Format "2 January 2006" }}</span>
+  {{ with .Params.tags }}
+    <span class="sv-meta-tags">{{ delimit . " · " }}</span>
+  {{ end }}
+</footer>
+
+{{ end }}
