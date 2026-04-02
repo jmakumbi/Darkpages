@@ -1,0 +1,5 @@
+{{ if eq (.Get "centered") "true" }}
+<blockquote class="pullquote pullquote-centered">{{ .Inner | markdownify }}</blockquote>
+{{ else }}
+<blockquote class="pullquote">{{ .Inner | markdownify }}</blockquote>
+{{ end }}
