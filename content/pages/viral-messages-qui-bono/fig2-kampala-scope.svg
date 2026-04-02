@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340">
+  <rect width="760" height="340" fill="#d6cdb8"/>
+
+  <!-- Title -->
+  <text x="380" y="26" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#450f00">Kampala Metropolitan Area — 26-Area Alert Coverage</text>
+  <text x="380" y="44" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00" fill-opacity="0.55">Three Regional Police Commander jurisdictions — north, south, east, west, and central</text>
+
+  <!-- Sector boxes -->
+
+  <!-- NORTH sector -->
+  <rect x="220" y="58" width="320" height="72" rx="3" fill="#e8e2d4" stroke="#450f00" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="380" y="74" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" font-weight="700" fill="#c47a22" letter-spacing="0.08em">NORTH</text>
+  <text x="380" y="88"  text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Kawempe · Nabweru · Nansana · Katooke · Mpererwe</text>
+  <text x="380" y="102" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Kyebando · Bwayise · Kawaala · Namungoona · Bulindo</text>
+  <text x="380" y="116" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Kira · Kireka · Bweyogerere · Namugongo</text>
+
+  <!-- WEST sector -->
+  <rect x="18" y="152" width="192" height="80" rx="3" fill="#e8e2d4" stroke="#450f00" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="114" y="168" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" font-weight="700" fill="#c47a22" letter-spacing="0.08em">WEST</text>
+  <text x="114" y="183" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Nateete · Kyengera</text>
+  <text x="114" y="197" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Bulenga · Mutundwe</text>
+  <text x="114" y="211" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Kabowa · Nkulabye</text>
+  <text x="114" y="225" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Kawaala</text>
+
+  <!-- CENTRAL sector (highlighted) -->
+  <rect x="230" y="152" width="300" height="80" rx="3" fill="#450f00" fill-opacity="0.08" stroke="#c47a22" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="380" y="168" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" font-weight="700" fill="#c47a22" letter-spacing="0.08em">CENTRAL</text>
+  <text x="380" y="184" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Kampala Central · Najjanankumbi</text>
+  <text x="380" y="198" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Ndeeba · Nakawa · Makindye</text>
+  <text x="380" y="214" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Salaama Road</text>
+
+  <!-- EAST sector -->
+  <rect x="550" y="152" width="192" height="80" rx="3" fill="#e8e2d4" stroke="#450f00" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="646" y="168" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" font-weight="700" fill="#c47a22" letter-spacing="0.08em">EAST</text>
+  <text x="646" y="184" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Nakawa · Kireka</text>
+  <text x="646" y="198" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Bweyogerere</text>
+  <text x="646" y="212" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Namugongo · Kira</text>
+
+  <!-- SOUTH sector -->
+  <rect x="220" y="254" width="320" height="56" rx="3" fill="#e8e2d4" stroke="#450f00" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="380" y="270" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" font-weight="700" fill="#c47a22" letter-spacing="0.08em">SOUTH / SOUTHWEST</text>
+  <text x="380" y="285" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Makindye · Kabowa · Nkulabye · Najjanankumbi · Ndeeba</text>
+  <text x="380" y="299" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00">Salaama Road · Mutundwe · Kyengera · Bulenga</text>
+
+  <!-- Connector lines between sectors -->
+  <line x1="210"  y1="192" x2="230"  y2="192" stroke="#450f00" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="530"  y1="192" x2="550"  y2="192" stroke="#450f00" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="380"  y1="130" x2="380"  y2="152" stroke="#450f00" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="380"  y1="232" x2="380"  y2="254" stroke="#450f00" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Area count badge -->
+  <rect x="316" y="324" width="128" height="1" fill="#450f00" fill-opacity="0.12"/>
+  <text x="380" y="336" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00" fill-opacity="0.5">26 areas · 3 RPC jurisdictions · complete KMA footprint</text>
+</svg>
