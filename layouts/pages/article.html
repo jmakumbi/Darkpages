@@ -1,0 +1,426 @@
+{{ define "main" }}
+<style>
+  /* ── Header Band ── */
+  .ar-header {
+    background: var(--color-bg-dark);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  .ar-series {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .ar-title {
+    font-family: var(--font-heading) !important;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--color-text-inv) !important;
+    line-height: 1.2;
+    margin: 0 0 0.75rem;
+    font-weight: 700;
+  }
+  .ar-subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    opacity: 0.6;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  /* ── Byline Strip ── */
+  .ar-byline-strip {
+    background: var(--color-bg-dark);
+    border-top: 1px solid rgba(196, 122, 34, 0.2);
+    padding: 0.6rem 1.5rem;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-accent);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── Outer Layout (TOC + body) ── */
+  .ar-layout {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  /* ── TOC (hidden by default) ── */
+  .ar-toc {
+    display: none;
+  }
+
+  /* ── Desktop TOC grid ── */
+  @media (min-width: 1100px) {
+    .ar-layout.has-toc {
+      display: grid;
+      grid-template-columns: 760px 220px;
+      max-width: 1040px;
+      gap: 3rem;
+      align-items: start;
+      padding: 0 1.5rem;
+    }
+    .ar-layout.has-toc .ar-body {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .ar-toc {
+      display: block;
+      position: sticky;
+      top: 2rem;
+      padding-top: 2rem;
+    }
+    .ar-toc-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-accent);
+      margin: 0 0 0.75rem;
+    }
+    .ar-toc nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .ar-toc nav ul ul {
+      padding-left: 1rem;
+      margin-top: 0.25rem;
+    }
+    .ar-toc nav li {
+      margin-bottom: 0.4rem;
+    }
+    .ar-toc nav a {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--color-text);
+      text-decoration: none;
+      opacity: 0.65;
+      line-height: 1.4;
+      display: block;
+    }
+    .ar-toc nav a:hover {
+      color: var(--color-accent);
+      opacity: 1;
+    }
+  }
+
+  /* ── Reading Column ── */
+  .ar-body {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+  }
+  .ar-body h2 {
+    font-family: var(--font-heading);
+    color: var(--color-bg-dark) !important;
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  .ar-body h2::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: var(--color-accent);
+    margin-bottom: 0.5rem;
+  }
+  .ar-body h3 {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-bg-dark) !important;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .ar-body p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+  .ar-body a {
+    color: var(--color-accent) !important;
+    text-decoration: none;
+  }
+  .ar-body a:hover {
+    text-decoration: underline;
+    color: var(--color-bg-dark) !important;
+  }
+  .ar-body ul,
+  .ar-body ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .ar-body li {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 0.35rem;
+  }
+  .ar-body em {
+    font-style: italic;
+  }
+  .ar-body strong {
+    font-weight: 600;
+  }
+  .ar-body hr {
+    border: none;
+    border-top: 1px solid rgba(69, 15, 0, 0.15);
+    margin: 2rem 0;
+  }
+  .ar-body code {
+    font-family: var(--font-mono);
+    background: var(--color-bg-dark);
+    color: var(--color-text-inv);
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+    font-size: 0.88em;
+  }
+  .ar-body pre {
+    background: var(--color-bg-dark);
+    color: var(--color-text-inv);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 1.25rem;
+  }
+  .ar-body pre code {
+    background: none;
+    padding: 0;
+    font-size: 0.85rem;
+  }
+
+  /* ── Feature Tables ── */
+  .ar-body .table-wrap {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+  .ar-body table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .ar-body thead tr {
+    background: var(--color-bg-dark);
+  }
+  .ar-body thead th {
+    color: var(--color-text-inv);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.5rem 0.85rem;
+    text-align: left;
+    font-weight: 600;
+  }
+  .ar-body tbody tr:nth-child(odd) {
+    background: var(--color-bg);
+  }
+  .ar-body tbody tr:nth-child(even) {
+    background: var(--color-card);
+  }
+  .ar-body td {
+    padding: 0.45rem 0.85rem;
+    vertical-align: top;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .ar-body td:first-child {
+    font-weight: 600;
+    color: var(--color-bg-dark);
+    width: 38%;
+  }
+
+  /* ── Callout Block ── */
+  .callout {
+    border-left: 3px solid var(--color-accent);
+    background: var(--color-card);
+    padding: 0.75rem 1rem;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 1.5rem 0;
+    line-height: 1.6;
+  }
+  .callout p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+
+  /* ── Pull Quote ── */
+  .pullquote {
+    border-left: 3px solid var(--color-accent);
+    margin: 1.5rem 0;
+    padding: 0.5rem 1rem 0.5rem 1.25rem;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--color-bg-dark);
+    background: none;
+    border-radius: 0;
+  }
+  .pullquote p {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  /* ── Centred Pull Quote ── */
+  .pullquote-centered {
+    border-left: none;
+    border: none;
+    text-align: center;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 0;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--color-bg-dark);
+    background: none;
+  }
+  .pullquote-centered p {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  /* ── Domain Stamp ── */
+  .ar-stamp {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-text);
+    opacity: 0.55;
+    margin: 2rem auto 0;
+  }
+  .ar-stamp p {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+  .ar-domain-stamp {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-text);
+    opacity: 0.3;
+    padding: 0.5rem 0 2rem;
+    margin: 0;
+  }
+
+  /* ── Meta Footer ── */
+  .ar-meta {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem 1.5rem;
+    border-top: 2px solid rgba(69, 15, 0, 0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .ar-meta-date {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--color-text);
+    opacity: 0.5;
+  }
+  .ar-meta-tags {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--color-accent);
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 767px) {
+    .ar-header {
+      padding: 2rem 1rem 1.5rem;
+    }
+    .ar-title {
+      font-size: clamp(1.6rem, 6vw, 2rem);
+    }
+    .ar-body {
+      padding: 1.5rem 1rem 2rem;
+    }
+    .ar-body table {
+      font-size: 0.8rem;
+    }
+    .ar-body td {
+      padding: 0.35rem 0.5rem;
+    }
+    .ar-meta {
+      padding: 0.75rem 1rem 1.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .ar-body {
+      padding: 2rem 2rem 3rem;
+    }
+  }
+</style>
+
+<!-- Header Band -->
+<header class="ar-header">
+  {{ with .Params.series }}
+    <span class="ar-series">series: {{ . }}</span>
+  {{ end }}
+  <h1 class="ar-title">{{ .Title }}</h1>
+  {{ with .Params.subtitle }}
+    <span class="ar-subtitle">{{ . }}</span>
+  {{ end }}
+</header>
+
+<!-- Byline Strip -->
+<div class="ar-byline-strip">
+  {{ .Date.Format "2 January 2006" }}
+  {{ with .Params.tags }} · {{ delimit . " · " }}{{ end }}
+</div>
+
+<!-- Layout wrapper (grid when TOC enabled) -->
+<div class="ar-layout{{ if .Params.toc }} has-toc{{ end }}">
+
+  <!-- Reading Column -->
+  <article class="ar-body">
+    {{ .Content }}
+  </article>
+
+  <!-- TOC Sidebar -->
+  {{ if .Params.toc }}
+  <aside class="ar-toc">
+    <p class="ar-toc-label">Contents</p>
+    {{ .TableOfContents }}
+  </aside>
+  {{ end }}
+
+</div>
+
+<!-- Meta Footer -->
+<footer class="ar-meta">
+  <span class="ar-meta-date">{{ .Date.Format "2 January 2006" }}</span>
+  {{ with .Params.tags }}
+    <span class="ar-meta-tags">{{ delimit . " · " }}</span>
+  {{ end }}
+</footer>
+
+<!-- Domain Stamp -->
+<p class="ar-domain-stamp">billableonline.co</p>
+
+{{ end }}
