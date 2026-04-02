@@ -51,6 +51,8 @@ Those twenty-six areas collectively cover the entire Kampala Metropolitan footpr
 
 No single community source has operational visibility across that entire geography. To compile this list with confidence requires either access to intelligence from all three KMP divisional commands simultaneously, a sufficiently elevated position in the security architecture, or the creative use of a map of Kampala and an afternoon with nothing better to do.
 
+{{< screenshot src="fig2-kampala-scope.svg" caption="No single community actor has operational visibility across this complete footprint" fig="2" >}}
+
 The phone numbers attached are not community contacts — they are Division-level and Regional Police Commander contacts drawn from official UPF directories. A community member compiling this message would have needed to cross-reference official directories, maintain metropolitan-level situational awareness, and format a document with precisely the institutional veneer needed to ensure unedited forwarding. That is, charitably, an unusual skill set for an organic WhatsApp alert.
 
 ## IV. The Curious Architecture of the Message Itself
@@ -70,6 +72,8 @@ A well-designed message intended to propagate widely and unedited would need spe
 The edit resistance deserves particular attention. Organic community messages get annotated, shortened, personalised as they travel. This message was structured to feel authoritative enough that most forwarders would transmit it verbatim. The institutional tone, the numbered format, the official-sounding contact list — all serve the function of discouraging light editing that would corrupt a consistent payload hash.
 
 It is engineered for hash consistency. Which is either a remarkable coincidence or a design requirement.
+
+{{< screenshot src="fig1-propagation-graph.svg" caption="Each forwarding decision is a voluntary edge declaration in a social graph" fig="1" >}}
 
 ## V. The Technical Layer — What the Network Actually Sees
 
@@ -91,6 +95,8 @@ Your telecom — MTN Uganda — cannot read the encrypted payload. But it can se
 MTN uses Carrier-Grade Network Address Translation, meaning you share a public IP with potentially hundreds of other subscribers. From outside MTN's network, you are invisible. But MTN maintains internal NAT translation tables that map exactly which private subscriber was behind that public IP at any given moment. You are completely identifiable to MTN regardless of CGNAT.
 
 ### The Payload Size Fingerprint
+
+{{< screenshot src="fig4-payload-fingerprint.svg" caption="Ciphertext length is a function of plaintext length and is observable at the network layer" fig="4" >}}
 
 A message of specific character length produces a ciphertext of predictable, consistent size. The content is encrypted, but the size of the encrypted payload is visible at the network layer.
 
@@ -118,9 +124,7 @@ NIRA's database contains against each NIN: full legal name, date and place of bi
 
 Here is why this matters. The integration of Safe City and SIM-NIN creates a closed identification loop.
 
-{{< callout >}}
-Camera captures face → Facial recognition matches against NIRA biometric database → NIRA returns NIN → NIN maps to MSISDN via SIM registration → MSISDN maps to real-time device location via MTN/Airtel → MSISDN maps to all communication metadata via RICA interception framework
-{{< /callout >}}
+{{< screenshot src="fig3-identification-loop.svg" caption="SIM-NIN mandate is the keystone that closes the loop between face and communication record" fig="3" >}}
 
 A face on a Kampala camera can be resolved to a full legal identity, a phone number, a home address, all communication patterns, and real-time location — within domestically controlled systems, in near real-time, without international legal cooperation.
 

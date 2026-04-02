@@ -1,0 +1,7 @@
+{{ $img := .Page.Resources.GetMatch (.Get "src") }}
+{{ if $img }}
+<figure class="ar-figure">
+  <img src="{{ $img.RelPermalink }}" alt="{{ .Get "caption" }}" loading="lazy">
+  <figcaption class="ar-figure-caption">{{ with .Get "fig" }}fig. {{ . }} — {{ end }}{{ .Get "caption" }}</figcaption>
+</figure>
+{{ end }}

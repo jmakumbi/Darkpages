@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320">
+  <rect width="760" height="320" fill="#d6cdb8"/>
+
+  <!-- Title -->
+  <text x="380" y="26" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#450f00">Message Propagation Network</text>
+
+  <!-- Seed to L1 edges -->
+  <line x1="86" y1="158" x2="208" y2="72" stroke="#c47a22" stroke-width="1.5" stroke-opacity="0.6"/>
+  <line x1="86" y1="158" x2="208" y2="118" stroke="#c47a22" stroke-width="1.5" stroke-opacity="0.6"/>
+  <line x1="86" y1="158" x2="208" y2="168" stroke="#c47a22" stroke-width="1.5" stroke-opacity="0.6"/>
+  <line x1="86" y1="158" x2="208" y2="218" stroke="#c47a22" stroke-width="1.5" stroke-opacity="0.6"/>
+  <line x1="86" y1="158" x2="208" y2="258" stroke="#c47a22" stroke-width="1.5" stroke-opacity="0.6"/>
+
+  <!-- L1 to L2 edges -->
+  <line x1="232" y1="72"  x2="358" y2="48"  stroke="#450f00" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="232" y1="72"  x2="358" y2="88"  stroke="#450f00" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="232" y1="118" x2="358" y2="112" stroke="#450f00" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="232" y1="118" x2="358" y2="140" stroke="#450f00" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="232" y1="168" x2="358" y2="165" stroke="#450f00" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="232" y1="218" x2="358" y2="198" stroke="#450f00" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="232" y1="218" x2="358" y2="228" stroke="#450f00" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="232" y1="258" x2="358" y2="255" stroke="#450f00" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="232" y1="258" x2="358" y2="278" stroke="#450f00" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- L2 to L3 edges -->
+  <line x1="370" y1="48"  x2="498" y2="38"  stroke="#450f00" stroke-width="0.75" stroke-opacity="0.2"/>
+  <line x1="370" y1="48"  x2="498" y2="60"  stroke="#450f00" stroke-width="0.75" stroke-opacity="0.2"/>
+  <line x1="370" y1="88"  x2="498" y2="82"  stroke="#450f00" stroke-width="0.75" stroke-opacity="0.2"/>
+  <line x1="370" y1="112" x2="498" y2="108" stroke="#450f00" stroke-width="0.75" stroke-opacity="0.2"/>
+  <line x1="370" y1="140" x2="498" y2="135" stroke="#450f00" stroke-width="0.75" stroke-opacity="0.2"/>
+  <line x1="370" y1="140" x2="498" y2="152" stroke="#450f00" stroke-width="0.75" stroke-opacity="0.2"/>
+  <line x1="370" y1="165" x2="498" y2="168" stroke="#450f00" stroke-width="0.75" stroke-opacity="0.2"/>
+  <line x1="370" y1="228" x2="498" y2="222" stroke="#450f00" stroke-width="0.75" stroke-opacity="0.2"/>
+  <line x1="370" y1="255" x2="498" y2="248" stroke="#450f00" stroke-width="0.75" stroke-opacity="0.2"/>
+  <line x1="370" y1="278" x2="498" y2="272" stroke="#450f00" stroke-width="0.75" stroke-opacity="0.2"/>
+  <line x1="370" y1="278" x2="498" y2="285" stroke="#450f00" stroke-width="0.75" stroke-opacity="0.2"/>
+
+  <!-- L3 to implied further (short fade lines) -->
+  <line x1="508" y1="38"  x2="590" y2="33"  stroke="#450f00" stroke-width="0.5" stroke-opacity="0.12"/>
+  <line x1="508" y1="60"  x2="590" y2="55"  stroke="#450f00" stroke-width="0.5" stroke-opacity="0.12"/>
+  <line x1="508" y1="60"  x2="590" y2="67"  stroke="#450f00" stroke-width="0.5" stroke-opacity="0.12"/>
+  <line x1="508" y1="108" x2="590" y2="103" stroke="#450f00" stroke-width="0.5" stroke-opacity="0.12"/>
+  <line x1="508" y1="168" x2="590" y2="163" stroke="#450f00" stroke-width="0.5" stroke-opacity="0.12"/>
+  <line x1="508" y1="272" x2="590" y2="268" stroke="#450f00" stroke-width="0.5" stroke-opacity="0.12"/>
+
+  <!-- Seed node -->
+  <circle cx="70" cy="158" r="18" fill="#c47a22"/>
+  <text x="70" y="153" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" font-weight="700" fill="#d6cdb8">SEED</text>
+  <text x="70" y="163" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#d6cdb8">NODE</text>
+
+  <!-- L1 nodes -->
+  <circle cx="220" cy="72"  r="11" fill="#450f00"/>
+  <circle cx="220" cy="118" r="11" fill="#450f00"/>
+  <circle cx="220" cy="168" r="11" fill="#450f00"/>
+  <circle cx="220" cy="218" r="11" fill="#450f00"/>
+  <circle cx="220" cy="258" r="11" fill="#450f00"/>
+
+  <!-- L2 nodes -->
+  <circle cx="366" cy="48"  r="8" fill="#450f00" fill-opacity="0.72"/>
+  <circle cx="366" cy="88"  r="8" fill="#450f00" fill-opacity="0.72"/>
+  <circle cx="366" cy="112" r="8" fill="#450f00" fill-opacity="0.72"/>
+  <circle cx="366" cy="140" r="8" fill="#450f00" fill-opacity="0.72"/>
+  <circle cx="366" cy="165" r="8" fill="#450f00" fill-opacity="0.72"/>
+  <circle cx="366" cy="198" r="8" fill="#450f00" fill-opacity="0.72"/>
+  <circle cx="366" cy="228" r="8" fill="#450f00" fill-opacity="0.72"/>
+  <circle cx="366" cy="255" r="8" fill="#450f00" fill-opacity="0.72"/>
+  <circle cx="366" cy="278" r="8" fill="#450f00" fill-opacity="0.72"/>
+
+  <!-- L3 nodes -->
+  <circle cx="504" cy="38"  r="5" fill="#450f00" fill-opacity="0.45"/>
+  <circle cx="504" cy="60"  r="5" fill="#450f00" fill-opacity="0.45"/>
+  <circle cx="504" cy="82"  r="5" fill="#450f00" fill-opacity="0.45"/>
+  <circle cx="504" cy="108" r="5" fill="#450f00" fill-opacity="0.45"/>
+  <circle cx="504" cy="135" r="5" fill="#450f00" fill-opacity="0.45"/>
+  <circle cx="504" cy="152" r="5" fill="#450f00" fill-opacity="0.45"/>
+  <circle cx="504" cy="168" r="5" fill="#450f00" fill-opacity="0.45"/>
+  <circle cx="504" cy="222" r="5" fill="#450f00" fill-opacity="0.45"/>
+  <circle cx="504" cy="248" r="5" fill="#450f00" fill-opacity="0.45"/>
+  <circle cx="504" cy="272" r="5" fill="#450f00" fill-opacity="0.45"/>
+  <circle cx="504" cy="285" r="5" fill="#450f00" fill-opacity="0.45"/>
+
+  <!-- Implied further nodes (tiny dots) -->
+  <circle cx="592" cy="33"  r="3" fill="#450f00" fill-opacity="0.22"/>
+  <circle cx="592" cy="55"  r="3" fill="#450f00" fill-opacity="0.22"/>
+  <circle cx="592" cy="67"  r="3" fill="#450f00" fill-opacity="0.22"/>
+  <circle cx="592" cy="103" r="3" fill="#450f00" fill-opacity="0.22"/>
+  <circle cx="592" cy="163" r="3" fill="#450f00" fill-opacity="0.22"/>
+  <circle cx="592" cy="268" r="3" fill="#450f00" fill-opacity="0.22"/>
+
+  <!-- Continuation arrows -->
+  <text x="608" y="37"  font-family="'Courier New', monospace" font-size="9" fill="#450f00" fill-opacity="0.3">→</text>
+  <text x="608" y="107" font-family="'Courier New', monospace" font-size="9" fill="#450f00" fill-opacity="0.3">→</text>
+  <text x="608" y="167" font-family="'Courier New', monospace" font-size="9" fill="#450f00" fill-opacity="0.3">→</text>
+  <text x="608" y="272" font-family="'Courier New', monospace" font-size="9" fill="#450f00" fill-opacity="0.3">→</text>
+
+  <!-- Legend -->
+  <rect x="18" y="294" width="724" height="1" fill="#450f00" fill-opacity="0.12"/>
+  <circle cx="34"  cy="308" r="6"  fill="#c47a22"/>
+  <text   x="46"  y="312" font-family="'Courier New', monospace" font-size="9" fill="#450f00">seed node</text>
+  <circle cx="118" cy="308" r="6"  fill="#450f00"/>
+  <text   x="130" y="312" font-family="'Courier New', monospace" font-size="9" fill="#450f00">subscriber (biometrically anchored via SIM-NIN)</text>
+  <text   x="530" y="312" font-family="'Courier New', monospace" font-size="9" fill="#450f00" fill-opacity="0.5">each edge = 1 metadata event</text>
+</svg>

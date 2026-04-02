@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280">
+  <rect width="760" height="280" fill="#d6cdb8"/>
+
+  <!-- Title -->
+  <text x="380" y="26" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#450f00">Payload Size Fingerprint</text>
+  <text x="380" y="44" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#450f00" fill-opacity="0.55">Content is encrypted — but payload size is a function of plaintext length and is visible at the network layer</text>
+
+  <!-- PLAINTEXT block -->
+  <rect x="40"  y="66" width="168" height="120" rx="4" fill="#e8e2d4" stroke="#450f00" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="124" y="84" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" font-weight="700" fill="#450f00" letter-spacing="0.06em">PLAINTEXT</text>
+  <!-- Simulated text lines -->
+  <rect x="56"  y="92"  width="136" height="6" rx="2" fill="#450f00" fill-opacity="0.15"/>
+  <rect x="56"  y="103" width="120" height="6" rx="2" fill="#450f00" fill-opacity="0.15"/>
+  <rect x="56"  y="114" width="136" height="6" rx="2" fill="#450f00" fill-opacity="0.15"/>
+  <rect x="56"  y="125" width="100" height="6" rx="2" fill="#450f00" fill-opacity="0.15"/>
+  <rect x="56"  y="136" width="136" height="6" rx="2" fill="#450f00" fill-opacity="0.15"/>
+  <rect x="56"  y="147" width="124" height="6" rx="2" fill="#450f00" fill-opacity="0.15"/>
+  <rect x="56"  y="158" width="136" height="6" rx="2" fill="#450f00" fill-opacity="0.15"/>
+  <rect x="56"  y="169" width="84"  height="6" rx="2" fill="#450f00" fill-opacity="0.15"/>
+  <text x="124" y="196" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#450f00" fill-opacity="0.5">N characters</text>
+
+  <!-- Encryption arrow -->
+  <text x="252" y="108" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#450f00" fill-opacity="0.5">Signal</text>
+  <text x="252" y="120" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#450f00" fill-opacity="0.5">Protocol</text>
+  <line x1="212" y1="126" x2="282" y2="126" stroke="#450f00" stroke-opacity="0.35" stroke-width="1.5"/>
+  <polygon points="282,122 292,126 282,130" fill="#450f00" fill-opacity="0.35"/>
+
+  <!-- CIPHERTEXT block -->
+  <rect x="296" y="66" width="168" height="120" rx="4" fill="#450f00" fill-opacity="0.08" stroke="#450f00" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="380" y="84" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" font-weight="700" fill="#450f00" letter-spacing="0.06em">CIPHERTEXT</text>
+  <!-- Encrypted noise pattern blocks -->
+  <rect x="312" y="92"  width="136" height="6" rx="2" fill="#450f00" fill-opacity="0.22"/>
+  <rect x="312" y="103" width="120" height="6" rx="2" fill="#450f00" fill-opacity="0.22"/>
+  <rect x="312" y="114" width="136" height="6" rx="2" fill="#450f00" fill-opacity="0.22"/>
+  <rect x="312" y="125" width="100" height="6" rx="2" fill="#450f00" fill-opacity="0.22"/>
+  <rect x="312" y="136" width="136" height="6" rx="2" fill="#450f00" fill-opacity="0.22"/>
+  <rect x="312" y="147" width="124" height="6" rx="2" fill="#450f00" fill-opacity="0.22"/>
+  <rect x="312" y="158" width="136" height="6" rx="2" fill="#450f00" fill-opacity="0.22"/>
+  <rect x="312" y="169" width="84"  height="6" rx="2" fill="#450f00" fill-opacity="0.22"/>
+  <text x="380" y="196" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#c47a22">≈ N bytes (visible)</text>
+
+  <!-- Observer line -->
+  <line x1="296" y1="220" x2="464" y2="220" stroke="#c47a22" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="380" y1="188" x2="380" y2="218" stroke="#c47a22" stroke-opacity="0.4" stroke-width="1"/>
+
+  <!-- Observer label -->
+  <rect x="296" y="222" width="168" height="28" rx="3" fill="#450f00" fill-opacity="0.06" stroke="#c47a22" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="380" y="233" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#450f00" fill-opacity="0.7">MTN packet inspection layer</text>
+  <text x="380" y="244" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#c47a22" fill-opacity="0.8">payload size: queryable</text>
+
+  <!-- Brace / comparison annotation -->
+  <line x1="474" y1="66"  x2="474" y2="186" stroke="#450f00" stroke-opacity="0.3" stroke-width="1"/>
+  <line x1="474" y1="66"  x2="480" y2="66"  stroke="#450f00" stroke-opacity="0.3" stroke-width="1"/>
+  <line x1="474" y1="186" x2="480" y2="186" stroke="#450f00" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="492" y="118" font-family="'Courier New', monospace" font-size="8" fill="#450f00" fill-opacity="0.55">consistent</text>
+  <text x="492" y="130" font-family="'Courier New', monospace" font-size="8" fill="#450f00" fill-opacity="0.55">size across</text>
+  <text x="492" y="142" font-family="'Courier New', monospace" font-size="8" fill="#450f00" fill-opacity="0.55">all devices</text>
+  <text x="492" y="154" font-family="'Courier New', monospace" font-size="8" fill="#450f00" fill-opacity="0.55">that forwarded</text>
+  <text x="492" y="166" font-family="'Courier New', monospace" font-size="8" fill="#450f00" fill-opacity="0.55">this message</text>
+
+  <!-- MSISDN + timestamp label on right -->
+  <rect x="620" y="82" width="122" height="88" rx="4" fill="#e8e2d4" stroke="#450f00" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="681" y="98"  text-anchor="middle" font-family="'Courier New', monospace" font-size="7" font-weight="700" fill="#c47a22" letter-spacing="0.06em">LOG ENTRY</text>
+  <text x="681" y="113" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#450f00">MSISDN</text>
+  <text x="681" y="126" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#450f00">timestamp</text>
+  <text x="681" y="139" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#450f00">payload size</text>
+  <text x="681" y="155" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#450f00" fill-opacity="0.5">× every subscriber</text>
+  <text x="681" y="165" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#450f00" fill-opacity="0.5">who forwarded</text>
+
+  <line x1="600" y1="126" x2="618" y2="126" stroke="#450f00" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="3,3"/>
+  <polygon points="616,122 624,126 616,130" fill="#450f00" fill-opacity="0.3"/>
+
+  <!-- Bottom rule and note -->
+  <rect x="18" y="262" width="724" height="1" fill="#450f00" fill-opacity="0.12"/>
+  <text x="380" y="275" text-anchor="middle" font-family="'Courier New', monospace" font-size="8.5" fill="#1a0800" fill-opacity="0.5">No decryption. No platform cooperation. No international legal process. The size alone is sufficient for propagation mapping.</text>
+</svg>
