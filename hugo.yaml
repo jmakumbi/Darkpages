@@ -5,6 +5,11 @@ theme: "hugo-profile"
 
 enableRobotsTXT: false
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 disableKinds:
   - taxonomy
   - term
