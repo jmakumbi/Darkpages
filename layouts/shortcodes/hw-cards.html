@@ -1,0 +1,47 @@
+{{ $devices := slice
+  (dict "file" "zimaboard2-1664.webp"   "status" "In Use"          "name" "ZimaBoard2 1664"  "desc" "Second-generation, increased compute. Current homelab backbone.")
+  (dict "file" "zimablade-7700.webp"    "status" "In Use"          "name" "ZimaBlade 7700"   "desc" "Compact NAS and compute blade. Client-site deployments.")
+  (dict "file" "zimacube-2-pro.webp"    "status" "Lab Tested"      "name" "ZimaCube 2 Pro"   "desc" "Received directly from IceWhale Technology. Lab-tested and documented. Eight-bay NAS with internal compute.")
+  (dict "file" "firewalla-gold-se.webp"   "status" "In Use · Homelab" "name" "Firewalla Gold SE"   "desc" "Network security and monitoring at the gateway layer. Homelab deployment.")
+  (dict "file" "firewalla-gold-plus.webp" "status" "Client · Managed" "name" "Firewalla Gold Plus"  "desc" "Client-site gateway security deployment.")
+}}
+<div class="hw-grid">
+
+  {{/* ZimaBoard 832 */}}
+  {{ $zb832 := $.Page.Resources.GetMatch "zimaboard-832.webp" }}
+  {{ if $zb832 }}
+    {{ $webp := $zb832.Resize "800x webp q82" }}
+    {{ $jpeg := $zb832.Resize "800x jpg q76" }}
+  <div class="hw-card">
+    <picture>
+      <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+      <img src="{{ $jpeg.RelPermalink }}" alt="ZimaBoard 832" width="{{ $jpeg.Width }}" height="{{ $jpeg.Height }}" loading="lazy">
+    </picture>
+    <div class="hw-card-body">
+      <span class="hw-status">In Use</span>
+      <span class="hw-name">ZimaBoard 832</span>
+      <p class="hw-desc">First-generation single-board server. In production use since initial availability.</p>
+    </div>
+  </div>
+  {{ end }}
+
+  {{ range $devices }}
+    {{ $img := $.Page.Resources.GetMatch .file }}
+    {{ if $img }}
+      {{ $webp := $img.Resize "800x webp q82" }}
+      {{ $jpeg := $img.Resize "800x jpg q76" }}
+  <div class="hw-card">
+    <picture>
+      <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+      <img src="{{ $jpeg.RelPermalink }}" alt="{{ .name }}" width="{{ $jpeg.Width }}" height="{{ $jpeg.Height }}" loading="lazy">
+    </picture>
+    <div class="hw-card-body">
+      <span class="hw-status">{{ .status }}</span>
+      <span class="hw-name">{{ .name }}</span>
+      <p class="hw-desc">{{ .desc }}</p>
+    </div>
+  </div>
+    {{ end }}
+  {{ end }}
+
+</div>

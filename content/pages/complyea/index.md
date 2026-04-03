@@ -40,6 +40,65 @@ Four steps from obligation to completion:
 
 **Track and Close** — Compliance officers update obligation status as work progresses. The dashboard shows exactly what is overdue, what is upcoming, and what is completed across all clients — at a glance, not after producing a report.
 
+<div class="complyea-mock">
+  <div class="mock-bar">
+    <span class="mock-dot" style="background:#e05050"></span>
+    <span class="mock-dot" style="background:#e0b030"></span>
+    <span class="mock-dot" style="background:#50b050"></span>
+    <span class="mock-label">ComplyEA — Compliance Dashboard</span>
+  </div>
+  <div class="mock-body">
+    <nav class="mock-nav">
+      <span class="mock-nav-group">Organisation</span>
+      <span class="mock-nav-item">Legal Firms</span>
+      <span class="mock-nav-item">Companies</span>
+      <span class="mock-nav-group">Compliance</span>
+      <span class="mock-nav-item mock-nav-active">Obligations</span>
+      <span class="mock-nav-item">Reminders</span>
+      <span class="mock-nav-item">Documents</span>
+      <span class="mock-nav-group">Regulatory</span>
+      <span class="mock-nav-item">Acts</span>
+      <span class="mock-nav-item">Requirements</span>
+    </nav>
+    <div class="mock-main">
+      <div class="mock-header">
+        <span class="mock-title">Overdue Obligations — All Clients</span>
+        <span class="mock-btn">Generate Reminders</span>
+      </div>
+      <div class="mock-grid">
+        <div class="mock-row mock-row-head">
+          <span>Obligation</span><span>Company</span>
+          <span>Due Date</span><span>Status</span>
+        </div>
+        <div class="mock-row">
+          <span>Annual Return Filing</span>
+          <span>ACME Corporation</span>
+          <span class="mock-date-over">31 Dec 2024</span>
+          <span class="mock-pill mock-over">● Overdue</span>
+        </div>
+        <div class="mock-row">
+          <span>AGM — Q4</span>
+          <span>Beta Finance Ltd</span>
+          <span class="mock-date-soon">28 Feb 2025</span>
+          <span class="mock-pill mock-soon">● Due Soon</span>
+        </div>
+        <div class="mock-row">
+          <span>Director Change Notice</span>
+          <span>ACME Corporation</span>
+          <span>15 Mar 2025</span>
+          <span class="mock-pill mock-prog">● In Progress</span>
+        </div>
+        <div class="mock-row">
+          <span>Quarterly Board Meeting</span>
+          <span>Beta Finance Ltd</span>
+          <span>31 Mar 2025</span>
+          <span class="mock-pill mock-done">● Completed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 ## What It Does
 
 Full feature set:

@@ -1,0 +1,12 @@
+{{ $img := .Page.Resources.GetMatch (.Get "src") }}
+{{ if $img }}
+  {{ $webp := $img.Resize "1400x webp q82" }}
+  {{ $jpeg := $img.Resize "1400x jpg q76" }}
+<figure class="screenshot-fig">
+  <picture>
+    <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+    <img src="{{ $jpeg.RelPermalink }}" alt="{{ .Get "alt" }}" width="{{ $jpeg.Width }}" height="{{ $jpeg.Height }}" loading="lazy">
+  </picture>
+  <figcaption>{{ .Get "caption" }}</figcaption>
+</figure>
+{{ end }}
