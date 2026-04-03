@@ -66,43 +66,13 @@ Six enterprise platforms designed from the ground up for East African legal prac
 
 IceWhale Zima single-board servers and Firewalla Gold Series network security appliances — in use since launch across homelab and client deployments.
 
-<div class="service-grid">
-
-<div class="service-card">
-<span class="card-rule"></span>
-<p class="card-title">ZimaBoard 832</p>
-<p class="card-body">First-generation single-board server. In production use since initial availability.</p>
-</div>
-
-<div class="service-card">
-<span class="card-rule"></span>
-<p class="card-title">ZimaBoard2 1664</p>
-<p class="card-body">Second-generation, increased compute. Current homelab backbone.</p>
-</div>
-
-<div class="service-card">
-<span class="card-rule"></span>
-<p class="card-title">ZimaBlade 7700</p>
-<p class="card-body">Compact NAS and compute blade. Client-site deployments.</p>
-</div>
-
-<div class="service-card">
-<span class="card-rule"></span>
-<p class="card-title">ZimaCube 2 Pro</p>
-<p class="card-body">Received directly from IceWhale Technology. Lab-tested and documented. Eight-bay NAS with internal compute — the platform that runs self-hosted services at the level a small firm would need.</p>
-</div>
-
-<div class="service-card">
-<span class="card-rule"></span>
-<p class="card-title">Firewalla Gold SE &amp; Gold Plus</p>
-<p class="card-body">Network security and monitoring at the gateway layer. Deployed at client sites and in homelab. These are not products on a brochure — they are devices that have been running continuously, broken, repaired, upgraded, and documented.</p>
-</div>
-
-</div>
+{{< hw-cards >}}
 
 ## Managed IT Services
 
 On-call IT management and infrastructure services for organisations without in-house IT capability. Current scope: 120-plus users under management.
+
+{{< m365-screenshot >}}
 
 <div class="service-grid">
 

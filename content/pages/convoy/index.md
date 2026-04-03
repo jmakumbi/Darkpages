@@ -40,6 +40,37 @@ Example: a Kampala–Mombasa export shipment:
 
 Each party operates independently. CONVOY gives the freight forwarder visibility across all four without any party having to report to another.
 
+<div class="convoy-diagram">
+  <div class="convoy-hub">
+    <div class="convoy-hub-label">CONVOY</div>
+    <div class="convoy-hub-sub">SHIPMENT HUB</div>
+    <div class="convoy-hub-ref">CNV/EXP-202601001</div>
+  </div>
+  <div class="convoy-parties">
+    <div class="convoy-party">
+      <div class="convoy-party-role">Freight Forwarder</div>
+      <div class="convoy-party-name">ABC Freight Ltd</div>
+      <div class="convoy-party-desc">Coordinates · Bills client · P&amp;L owner</div>
+    </div>
+    <div class="convoy-party">
+      <div class="convoy-party-role">Transport Operator</div>
+      <div class="convoy-party-name">XYZ Transport</div>
+      <div class="convoy-party-desc">Trucks · Drivers · Trip tracking</div>
+    </div>
+    <div class="convoy-party">
+      <div class="convoy-party-role">Clearing Agent</div>
+      <div class="convoy-party-name">Quick Clear Agents</div>
+      <div class="convoy-party-desc">URA declarations · HS codes · Duty</div>
+    </div>
+    <div class="convoy-party">
+      <div class="convoy-party-role">Warehouse Provider</div>
+      <div class="convoy-party-name">SafeStore Uganda</div>
+      <div class="convoy-party-desc">Storage · Handling · Release</div>
+    </div>
+  </div>
+  <p class="convoy-note">Each party sees only their tasks. Independent. Collaborative.</p>
+</div>
+
 ## Platform Modules
 
 Seven modules in one coordinated system:

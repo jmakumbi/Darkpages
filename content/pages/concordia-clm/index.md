@@ -65,6 +65,66 @@ Three steps:
 
 **Manage with confidence** — From day one, your team has full visibility, timely alerts, and a compliance-ready audit trail.
 
+<div class="clm-lifecycle">
+  <div class="clm-track">
+    <div class="clm-stage">
+      <div class="clm-node">1</div>
+      <span class="clm-label">Drafting</span>
+    </div>
+    <div class="clm-arrow">→</div>
+    <div class="clm-stage">
+      <div class="clm-node">2</div>
+      <span class="clm-label">Under Review</span>
+    </div>
+    <div class="clm-arrow">→</div>
+    <div class="clm-stage">
+      <div class="clm-node">3</div>
+      <span class="clm-label">Executed</span>
+    </div>
+    <div class="clm-arrow">→</div>
+    <div class="clm-stage">
+      <div class="clm-node">4</div>
+      <span class="clm-label">Active</span>
+    </div>
+    <div class="clm-arrow">→</div>
+    <div class="clm-stage">
+      <div class="clm-node">5</div>
+      <span class="clm-label">Expiring</span>
+    </div>
+    <div class="clm-arrow">→</div>
+    <div class="clm-stage">
+      <div class="clm-node">6</div>
+      <span class="clm-label">Closed</span>
+    </div>
+  </div>
+  <div class="clm-details">
+    <div class="clm-detail">
+      <span class="clm-detail-label">Drafting</span>
+      <p>A new agreement is created and assigned a unique reference number automatically. Key details — parties, type, governing law, and expected dates — are recorded. Nothing leaves this stage without the information your firm needs.</p>
+    </div>
+    <div class="clm-detail">
+      <span class="clm-detail-label">Under Review</span>
+      <p>The contract is circulated for review. ConcordiaCLM tracks who needs to approve it, flags missing sign-offs, and ensures the review process is fully documented for CGI and ICSA governance compliance.</p>
+    </div>
+    <div class="clm-detail">
+      <span class="clm-detail-label">Executed</span>
+      <p>Once all parties have signed, the executed date is recorded, the final document stored, and a version snapshot locked in. The complete negotiation history is preserved for future reference or dispute.</p>
+    </div>
+    <div class="clm-detail">
+      <span class="clm-detail-label">Active</span>
+      <p>The contract is live. Every milestone is monitored — payment dates, renewal windows, reporting obligations, statutory deadlines — with alerts sent before they become problems.</p>
+    </div>
+    <div class="clm-detail">
+      <span class="clm-detail-label">Expiring</span>
+      <p>As the contract approaches its end date, your team receives early warnings. Enough time to decide to renew, renegotiate, or let it lapse — and to act rather than scramble.</p>
+    </div>
+    <div class="clm-detail">
+      <span class="clm-detail-label">Closed</span>
+      <p>Whether the contract expired naturally or was terminated, the complete record — every version, every approval, every milestone — is preserved indefinitely, ready for audits, disputes, or future reference.</p>
+    </div>
+  </div>
+</div>
+
 ## Who It's For
 
 **Law firms** — from boutique practices to multi-partner firms managing client contracts, retainers, and service agreements.

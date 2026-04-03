@@ -16,6 +16,40 @@ Opus Juris lets legal teams search, analyse, and have conversations with their d
 
 It was built specifically because Uganda's Data Protection and Privacy Act 2019 makes sending confidential client data to overseas cloud services a legal liability, not just a privacy concern.
 
+<div class="oj-window">
+  <div class="oj-titlebar">
+    <span class="oj-dot" style="background:#e05050"></span>
+    <span class="oj-dot" style="background:#e0b030"></span>
+    <span class="oj-dot" style="background:#50b050"></span>
+    <span class="oj-title">Opus Juris — Document Intelligence</span>
+  </div>
+  <div class="oj-body">
+    <div class="oj-search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <span class="oj-query">What are the <mark class="oj-mark">termination clauses</mark> in our lease agreements?</span>
+    </div>
+    <div class="oj-result oj-result-top">
+      <div class="oj-result-header">
+        <span class="oj-doc">AF Mpanga — Lease Agreement 2024.pdf</span>
+        <span class="oj-score">97% match</span>
+      </div>
+      <p class="oj-excerpt">…either party may terminate this agreement with <mark class="oj-mark">90 days written notice</mark> provided that the grounds for termination are specified in the notice and include material breach…</p>
+    </div>
+    <div class="oj-result">
+      <div class="oj-result-header">
+        <span class="oj-doc">Commercial Lease — Kampala Rd 2023.pdf</span>
+        <span class="oj-score">88% match</span>
+      </div>
+      <p class="oj-excerpt">…<mark class="oj-mark">immediate termination</mark> is permitted where a party is adjudged bankrupt or enters into receivership under Ugandan insolvency law Section 14(2)…</p>
+    </div>
+    <div class="oj-ai">
+      <div class="oj-ai-label">✦ AI Summary</div>
+      <p class="oj-ai-text">Across your lease agreements, two termination mechanisms appear: standard notice (90 days) and immediate termination for insolvency events. Your 2024 agreement requires written grounds; the 2023 agreement does not.</p>
+      <p class="oj-ai-cite">↳ Sources cited: 2 documents · 4 clauses referenced</p>
+    </div>
+  </div>
+</div>
+
 ## The Problem
 
 Ugandan law firms and corporate legal departments carry a specific burden that international legal AI tools make worse, not better.

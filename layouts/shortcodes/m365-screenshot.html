@@ -1,0 +1,12 @@
+{{ $img := .Page.Resources.GetMatch "m365-admin-screenshot.jpg" }}
+{{ if $img }}
+  {{ $webp := $img.Resize "800x webp q82" }}
+  {{ $jpeg := $img.Resize "800x jpg q76" }}
+<figure class="screenshot-fig">
+  <picture>
+    <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+    <img src="{{ $jpeg.RelPermalink }}" alt="Microsoft 365 Admin Center — Service Health &amp; Updates panel" width="{{ $jpeg.Width }}" height="{{ $jpeg.Height }}" loading="lazy">
+  </picture>
+  <figcaption>Microsoft 365 Admin Center — Service Health &amp; Updates panel. Typical view from tenant management.</figcaption>
+</figure>
+{{ end }}
