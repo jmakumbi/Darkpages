@@ -45,10 +45,10 @@ Use existing layouts — do NOT create new layouts unless the user explicitly re
 
 Available layouts:
 - `lab-log` — equipment reviews, homelab builds, image-heavy technical docs (BUILT)
-- `article` — long-form writing (spec in `page-building-guide.md`, build when first needed)
-- `services` — consulting/offerings (spec in `page-building-guide.md`, build when first needed)
-- `note` — short observations (spec in `page-building-guide.md`, build when first needed)
-- `profile` — bio pages (spec in `page-building-guide.md`, build when first needed)
+- `article` — long-form writing, product explainers (BUILT)
+- `services` — consulting/offerings, portfolio pages (BUILT)
+- `note` — short observations (spec in `prompt/page-building-guide.md`, build when first needed)
+- `profile` — bio pages (spec in `prompt/page-building-guide.md`, build when first needed)
 
 ### 4. Frontmatter template
 ```yaml
@@ -74,8 +74,9 @@ tags:
 ```
 
 ### 5. Images
-- Use `{{</* labimg src="filename.jpg" caption="Caption" id="unique-id" */>}}` for all images
-- Use `{{</* gallery */>}}...{{</* /gallery */>}}` to wrap images in a 2-column grid
+- Use `{{</* labimg src="filename.jpg" caption="Caption" id="unique-id" */>}}` for all images in `lab-log` pages
+- Use `{{</* screenshot-fig src="filename.jpg" alt="Alt text" caption="Caption" */>}}` for full-width pipeline screenshots in `article` pages
+- Use `{{</* gallery */>}}...{{</* /gallery */>}}` to wrap `labimg` calls in a 2-column grid
 - Hugo processes images automatically: `Fill 1400x1050 Smart` crop for thumbnails, `Resize 1400x` for lightbox
 - All images get WebP (q82) + JPEG fallback (q76)
 - Thumbnail and lightbox use separate processed images — thumbnails are cropped 4:3, lightbox shows full image
@@ -87,7 +88,7 @@ hugo --minify    # must be zero errors
 
 ### 7. Commit and push
 ```bash
-git add content/pages/[slug]/ layouts/  # only add layouts/ if a new layout was created
+git add content/pages/[slug]/ layouts/  # only add layouts/ if a new layout was created or modified
 git commit -m "Add [page-type]: [brief description]"
 git push origin main
 ```
@@ -96,13 +97,27 @@ Page goes live at: `https://billableonline.co/[slug]/`
 
 ## Planning Documents
 
-Planning docs and page brief templates are in the repo root:
-- `PROJECT-README.md` — original architecture overview and brand guide
-- `hugo-darkpages-scaffold.md` — Hugo skeleton build instructions (already executed)
-- `page-building-guide.md` — reference for page creation across all layout types
-- `lablog-page-template.md` — reusable prompt template for lab-log pages
-- `github-pages-dns-setup.md` — DNS A records and GitHub Pages configuration
-- `zimacube-page-bundle/` — source brief and images for the ZimaCube post
+All planning docs and page brief templates are in `prompt/`:
+- `prompt/PROJECT-README.md` — original architecture overview and brand guide
+- `prompt/hugo-darkpages-scaffold.md` — Hugo skeleton build instructions (already executed)
+- `prompt/page-building-guide.md` — reference for page creation across all layout types
+- `prompt/lablog-page-template.md` — reusable prompt template for lab-log pages
+- `prompt/github-pages-dns-setup.md` — DNS A records and GitHub Pages configuration
+- `prompt/zimacube-2-pro-unboxing.md` — source brief for the ZimaCube post
+- `prompt/[product]-product-page.md` — source briefs for each product/service page
+
+## Live Pages
+
+| Slug | URL | Layout |
+|------|-----|--------|
+| zimacube-2-pro-unboxing | /zimacube-2-pro-unboxing/ | lab-log |
+| viral-messages-qui-bono | /viral-messages-qui-bono/ | article |
+| legal-tech-portfolio | /legal-tech-portfolio/ | services |
+| justiflow-adr | /justiflow-adr/ | article |
+| complyea | /complyea/ | article |
+| concordia-clm | /concordia-clm/ | article |
+| convoy | /convoy/ | article |
+| opus-juris | /opus-juris/ | article |
 
 ## Brand Tokens (DO NOT change without user request)
 
@@ -121,8 +136,15 @@ Planning docs and page brief templates are in the repo root:
 
 ## Shortcodes
 
-- `labimg` — single image with Hugo processing + CSS lightbox (`src`, `caption`, `id` params)
+- `labimg` — single image with Hugo processing + CSS lightbox (`src`, `caption`, `id` params) — for `lab-log` pages
 - `gallery` — wraps `labimg` calls in a 2-column CSS grid (1-column on mobile)
+- `screenshot-fig` — full-width pipeline screenshot with caption, uses `.screenshot-fig` CSS class (`src`, `alt`, `caption` params)
+- `hw-cards` — hardware product card grid, reads images from page resources, hardcoded to legal-tech-portfolio devices
+- `m365-screenshot` — Microsoft 365 admin screenshot, hardcoded to legal-tech-portfolio
+- `screenshot` — basic image figure without pipeline processing (`src`, `caption`, `fig` params)
+- `callout` — highlighted callout block
+- `pullquote` — pull quote styling
+- `stamp` — status/label stamp
 
 ## Constraints (always enforce)
 
@@ -132,5 +154,6 @@ Planning docs and page brief templates are in the repo root:
 - All colours via CSS variables — never hardcode hex in layouts
 - All images through Hugo's processing pipeline — never reference raw files
 - `noindex: true` on every page, always
+- `url: "/slug/"` must be set explicitly in every page's frontmatter
 - Strip EXIF from every image before commit
 - All source images must have EXIF stripped using `scripts/strip-exif.py`
