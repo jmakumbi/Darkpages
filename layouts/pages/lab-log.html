@@ -287,6 +287,55 @@
     color: var(--color-accent);
   }
 
+  /* ── Portrait Gallery Override ── */
+  .gallery-grid.gallery-portrait .gallery-item img {
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    max-height: 520px;
+    width: 100%;
+    height: auto;
+  }
+
+  /* ── Stats Band ── */
+  .stats-band {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(69, 15, 0, 0.15);
+    border-bottom: 1px solid rgba(69, 15, 0, 0.15);
+    margin: 2rem 0;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-number {
+    font-family: var(--font-mono);
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--color-accent);
+    font-weight: 700;
+    line-height: 1;
+  }
+  .stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-text);
+    opacity: 0.6;
+    margin-top: 0.35rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* ── Postscript Card ── */
+  .postscript-card {
+    background: var(--color-card);
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid rgba(69, 15, 0, 0.1);
+  }
+
   /* ── Mobile adjustments ── */
   @media (max-width: 767px) {
     .ll-header {
