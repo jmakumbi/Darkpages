@@ -8,6 +8,7 @@ A Hugo static site vault — standalone, unlinked pages deployed to GitHub Pages
 
 - **Hugo extended** is required (install via `winget install Hugo.Hugo.Extended` or equivalent)
 - **Python 3.12+** with **Pillow** for EXIF stripping (`pip install Pillow`)
+  - Python path on this machine: `C:\Users\jmaku\AppData\Local\Programs\Python\Python312\python.exe`
 - **GitHub CLI** (`gh`)
 - **Dev server**: `hugo server` → http://localhost:1313/
 - **Build**: `hugo --minify` (must produce zero errors, zero warnings)
@@ -77,9 +78,10 @@ tags:
 - Use `{{</* labimg src="filename.jpg" caption="Caption" id="unique-id" */>}}` for all images in `lab-log` pages
 - Use `{{</* screenshot-fig src="filename.jpg" alt="Alt text" caption="Caption" */>}}` for full-width pipeline screenshots in `article` pages
 - Use `{{</* gallery */>}}...{{</* /gallery */>}}` to wrap `labimg` calls in a 2-column grid
-- Hugo processes images automatically: `Fill 1400x1050 Smart` crop for thumbnails, `Resize 1400x` for lightbox
+- Hugo processes images automatically: `Resize 800x` for thumbnails (preserves natural aspect ratio), `Resize 1400x` for lightbox
 - All images get WebP (q82) + JPEG fallback (q76)
-- Thumbnail and lightbox use separate processed images — thumbnails are cropped 4:3, lightbox shows full image
+- Thumbnail and lightbox use separate processed images — thumbnails maintain original ratio, lightbox shows full image
+- For portrait galleries (mobile app screenshots), wrap `labimg` calls in `<div class="gallery-grid gallery-portrait">` raw HTML instead of the `gallery` shortcode — this triggers the portrait CSS override (400px fixed height, object-position: top)
 
 ### 6. Build and verify
 ```bash
@@ -97,14 +99,13 @@ Page goes live at: `https://billableonline.co/[slug]/`
 
 ## Planning Documents
 
-All planning docs and page brief templates are in `prompt/`:
-- `prompt/PROJECT-README.md` — original architecture overview and brand guide
-- `prompt/hugo-darkpages-scaffold.md` — Hugo skeleton build instructions (already executed)
-- `prompt/page-building-guide.md` — reference for page creation across all layout types
-- `prompt/lablog-page-template.md` — reusable prompt template for lab-log pages
-- `prompt/github-pages-dns-setup.md` — DNS A records and GitHub Pages configuration
-- `prompt/zimacube-2-pro-unboxing.md` — source brief for the ZimaCube post
-- `prompt/[product]-product-page.md` — source briefs for each product/service page
+New page briefs go in `prompt/`. Completed briefs are archived in `completed prompts/`.
+
+- `completed prompts/PROJECT-README.md` — original architecture overview and brand guide
+- `completed prompts/hugo-darkpages-scaffold.md` — Hugo skeleton build instructions (already executed)
+- `completed prompts/page-building-guide.md` — reference for page creation across all layout types
+- `completed prompts/lablog-page-template.md` — reusable prompt template for lab-log pages
+- `completed prompts/github-pages-dns-setup.md` — DNS A records and GitHub Pages configuration
 
 ## Live Pages
 
@@ -118,6 +119,7 @@ All planning docs and page brief templates are in `prompt/`:
 | concordia-clm | /concordia-clm/ | article |
 | convoy | /convoy/ | article |
 | opus-juris | /opus-juris/ | article |
+| firewalla-homelab | /firewalla-homelab/ | lab-log |
 
 ## Brand Tokens (DO NOT change without user request)
 
@@ -137,7 +139,7 @@ All planning docs and page brief templates are in `prompt/`:
 ## Shortcodes
 
 - `labimg` — single image with Hugo processing + CSS lightbox (`src`, `caption`, `id` params) — for `lab-log` pages
-- `gallery` — wraps `labimg` calls in a 2-column CSS grid (1-column on mobile)
+- `gallery` — wraps `labimg` calls in a 2-column CSS grid (1-column on mobile); for portrait screenshots use raw `<div class="gallery-grid gallery-portrait">` instead
 - `screenshot-fig` — full-width pipeline screenshot with caption, uses `.screenshot-fig` CSS class (`src`, `alt`, `caption` params)
 - `hw-cards` — hardware product card grid, reads images from page resources, hardcoded to legal-tech-portfolio devices
 - `m365-screenshot` — Microsoft 365 admin screenshot, hardcoded to legal-tech-portfolio
@@ -149,7 +151,7 @@ All planning docs and page brief templates are in `prompt/`:
 ## Constraints (always enforce)
 
 - No JavaScript — CSS `:target` only for interactivity
-- No analytics, tracking, or third-party scripts
+- No analytics beyond GoatCounter pixel — tracking via `gc.billableonline.co/count` (custom domain), suppressed during `hugo server`, configured via `params.goatcounter` in `hugo.yaml`
 - No links to a homepage
 - All colours via CSS variables — never hardcode hex in layouts
 - All images through Hugo's processing pipeline — never reference raw files
