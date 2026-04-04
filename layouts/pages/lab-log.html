@@ -173,7 +173,8 @@
   }
   .gallery-item img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     display: block;
   }
   .gallery-item figcaption {
@@ -289,11 +290,10 @@
 
   /* ── Portrait Gallery Override ── */
   .gallery-grid.gallery-portrait .gallery-item img {
-    aspect-ratio: 9 / 16;
+    aspect-ratio: unset;
+    height: 400px;
     object-fit: cover;
-    max-height: 520px;
-    width: 100%;
-    height: auto;
+    object-position: top center;
   }
 
   /* ── Stats Band ── */

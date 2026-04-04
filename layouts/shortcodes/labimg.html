@@ -3,8 +3,8 @@
 {{ $id := .Get "id" }}
 {{ $img := .Page.Resources.GetMatch $src }}
 {{ if $img }}
-  {{ $thumbWebp := $img.Fill "1400x1050 Smart webp q82" }}
-  {{ $thumbJpeg := $img.Fill "1400x1050 Smart jpg q76" }}
+  {{ $thumbWebp := $img.Resize "800x webp q82" }}
+  {{ $thumbJpeg := $img.Resize "800x jpg q76" }}
   {{ $fullWebp := $img.Resize "1400x webp q82" }}
   {{ $fullJpeg := $img.Resize "1400x jpg q76" }}
   <figure class="gallery-item">
