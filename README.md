@@ -59,8 +59,8 @@ This is not a website. It's a collection of self-contained pages that share a do
 ├── static/robots.txt                  # Disallow: /
 ├── scripts/strip-exif.py              # EXIF metadata stripping utility
 ├── .github/workflows/deploy.yml       # GitHub Actions deploy pipeline
-├── prompt/                            # Active page briefs and source images
-└── completed prompts/                 # Archived briefs for published pages
+├── prompt/                            # Active page briefs and source images (gitignored)
+└── completed prompts/                 # Archived briefs for published pages (gitignored)
 ```
 
 ## Live Pages
@@ -77,6 +77,7 @@ This is not a website. It's a collection of self-contained pages that share a do
 | Convoy | [/convoy/](https://billableonline.co/convoy/) |
 | Opus Juris | [/opus-juris/](https://billableonline.co/opus-juris/) |
 | Firewalla Homelab | [/firewalla-homelab/](https://billableonline.co/firewalla-homelab/) |
+| ZimaBoard 832 Unboxing | [/zimaboard-832-unboxing/](https://billableonline.co/zimaboard-832-unboxing/) |
 
 ## Page Layouts
 
