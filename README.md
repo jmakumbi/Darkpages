@@ -9,7 +9,7 @@ This is not a website. It's a collection of self-contained pages that share a do
 - **No homepage** — root URL shows a "Members only" gate
 - **No navigation** — pages are islands, linked only by sharing the URL directly
 - **No indexing** — `robots.txt` blocks all crawlers; every page has `noindex`
-- **No analytics** — no tracking, no third-party scripts
+- **Minimal analytics** — GoatCounter pixel only, routed through `gc.billableonline.co` to avoid ad blocker interference; suppressed in local dev
 
 ## Tech Stack
 
@@ -54,11 +54,13 @@ This is not a website. It's a collection of self-contained pages that share a do
 │   ├── complyea/
 │   ├── concordia-clm/
 │   ├── convoy/
-│   └── opus-juris/
+│   ├── opus-juris/
+│   └── firewalla-homelab/
 ├── static/robots.txt                  # Disallow: /
 ├── scripts/strip-exif.py              # EXIF metadata stripping utility
 ├── .github/workflows/deploy.yml       # GitHub Actions deploy pipeline
-└── prompt/                            # Page briefs, planning docs, source images
+├── prompt/                            # Active page briefs and source images
+└── completed prompts/                 # Archived briefs for published pages
 ```
 
 ## Live Pages
@@ -74,6 +76,7 @@ This is not a website. It's a collection of self-contained pages that share a do
 | Concordia CLM | [/concordia-clm/](https://billableonline.co/concordia-clm/) |
 | Convoy | [/convoy/](https://billableonline.co/convoy/) |
 | Opus Juris | [/opus-juris/](https://billableonline.co/opus-juris/) |
+| Firewalla Homelab | [/firewalla-homelab/](https://billableonline.co/firewalla-homelab/) |
 
 ## Page Layouts
 
@@ -118,6 +121,7 @@ Site is live with HTTPS at `billableonline.co` within ~60 seconds.
 
 1. Create a leaf bundle at `content/pages/[slug]/` with `index.md` and images
 2. Strip EXIF from images: `python scripts/strip-exif.py content/pages/[slug]/`
+   (Python path on this machine: `C:\Users\jmaku\AppData\Local\Programs\Python\Python312\python.exe`)
 3. Build and verify: `hugo --minify` (zero errors, zero warnings)
 4. Commit and push to `main`
 5. Page goes live at `https://billableonline.co/[slug]/`
