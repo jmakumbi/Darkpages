@@ -28,6 +28,7 @@ menu:
   main: []
 
 params:
+  goatcounter: "billableonline"
   title: "billableonline.co"
   description: ""
   favicon: ""
