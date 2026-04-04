@@ -28,7 +28,7 @@ menu:
   main: []
 
 params:
-  goatcounter: "billableonline"
+  goatcounter: "https://gc.billableonline.co/count"
   title: "billableonline.co"
   description: ""
   favicon: ""

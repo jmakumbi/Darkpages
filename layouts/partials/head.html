@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="{{ $brand.RelPermalink }}">
 
 {{- if and (not hugo.IsServer) (site.Params.goatcounter) }}
-<img src="https://{{ site.Params.goatcounter }}.goatcounter.com/count?p={{ .RelPermalink | urlquery }}"
+<img src="{{ site.Params.goatcounter }}?p={{ .RelPermalink | urlquery }}"
      style="position:absolute;width:0;height:0;visibility:hidden;"
      alt="" loading="eager" referrerpolicy="no-referrer-when-downgrade">
 {{- end }}
