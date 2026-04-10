@@ -121,6 +121,7 @@ New page briefs go in `prompt/`. Completed briefs are archived in `completed pro
 | opus-juris | /opus-juris/ | article |
 | firewalla-homelab | /firewalla-homelab/ | lab-log |
 | zimaboard-832-unboxing | /zimaboard-832-unboxing/ | lab-log |
+| firewalla-reflash | /firewalla-reflash/ | lab-log |
 
 ## Brand Tokens (DO NOT change without user request)
 

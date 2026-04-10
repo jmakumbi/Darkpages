@@ -55,7 +55,8 @@ This is not a website. It's a collection of self-contained pages that share a do
 │   ├── concordia-clm/
 │   ├── convoy/
 │   ├── opus-juris/
-│   └── firewalla-homelab/
+│   ├── firewalla-homelab/
+│   └── firewalla-reflash/
 ├── static/robots.txt                  # Disallow: /
 ├── scripts/strip-exif.py              # EXIF metadata stripping utility
 ├── .github/workflows/deploy.yml       # GitHub Actions deploy pipeline
@@ -78,6 +79,7 @@ This is not a website. It's a collection of self-contained pages that share a do
 | Opus Juris | [/opus-juris/](https://billableonline.co/opus-juris/) |
 | Firewalla Homelab | [/firewalla-homelab/](https://billableonline.co/firewalla-homelab/) |
 | ZimaBoard 832 Unboxing | [/zimaboard-832-unboxing/](https://billableonline.co/zimaboard-832-unboxing/) |
+| Firewalla Gold SE Reflash | [/firewalla-reflash/](https://billableonline.co/firewalla-reflash/) |
 
 ## Page Layouts
 
