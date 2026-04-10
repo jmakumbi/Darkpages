@@ -11,7 +11,7 @@ Images are overwritten in place. Safe to run multiple times.
 import os
 import sys
 import glob
-from PIL import Image
+from PIL import Image, ImageOps
 
 
 def strip_exif(directory: str) -> int:
@@ -23,6 +23,7 @@ def strip_exif(directory: str) -> int:
     for ext in ("*.jpg", "*.jpeg", "*.png"):
         for path in glob.glob(os.path.join(directory, ext)):
             img = Image.open(path)
+            img = ImageOps.exif_transpose(img)  # bake orientation into pixels
             clean = Image.new(img.mode, img.size)
             clean.putdata(list(img.getdata()))
 
