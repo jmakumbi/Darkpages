@@ -56,7 +56,8 @@ This is not a website. It's a collection of self-contained pages that share a do
 │   ├── convoy/
 │   ├── opus-juris/
 │   ├── firewalla-homelab/
-│   └── firewalla-reflash/
+│   ├── firewalla-reflash/
+│   └── vapt-appliance-zimaboard2/
 ├── static/robots.txt                  # Disallow: /
 ├── scripts/strip-exif.py              # EXIF metadata stripping utility
 ├── .github/workflows/deploy.yml       # GitHub Actions deploy pipeline
@@ -80,6 +81,7 @@ This is not a website. It's a collection of self-contained pages that share a do
 | Firewalla Homelab | [/firewalla-homelab/](https://billableonline.co/firewalla-homelab/) |
 | ZimaBoard 832 Unboxing | [/zimaboard-832-unboxing/](https://billableonline.co/zimaboard-832-unboxing/) |
 | Firewalla Gold SE Reflash | [/firewalla-reflash/](https://billableonline.co/firewalla-reflash/) |
+| VAPT Appliance: ZimaBoard2 | [/vapt-appliance-zimaboard2/](https://billableonline.co/vapt-appliance-zimaboard2/) |
 
 ## Page Layouts
 

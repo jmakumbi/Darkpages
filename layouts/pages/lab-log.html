@@ -366,9 +366,359 @@
       margin-top: 2.5rem;
     }
   }
+
+  /* ── Extra variables ── */
+  :root {
+    --color-text-muted: #5a4a30;
+    --color-rule: rgba(26,18,8,0.18);
+  }
+
+  /* ── Hero Header (standfirst variant) ── */
+  .ll-hero {
+    background: var(--color-bg-dark);
+    padding: clamp(3rem,8vw,6rem) clamp(1.5rem,5vw,4rem) clamp(2.5rem,6vw,4rem);
+    border-bottom: 3px solid var(--color-accent);
+  }
+  .ll-kicker {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .ll-kicker::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 3rem;
+    background: var(--color-accent);
+    opacity: 0.5;
+  }
+  .ll-hero-title {
+    font-family: var(--font-heading) !important;
+    font-size: clamp(1.9rem,4.5vw,3rem) !important;
+    font-weight: 700;
+    color: var(--color-text-inv) !important;
+    line-height: 1.2;
+    max-width: 24ch;
+    margin-bottom: 1.5rem;
+  }
+  .ll-hero-title em {
+    font-style: italic;
+    color: var(--color-accent) !important;
+  }
+  .ll-standfirst {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: rgba(214,205,184,0.75);
+    max-width: 60ch;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+  .ll-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .ll-reading-time {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: rgba(214,205,184,0.45);
+    text-transform: uppercase;
+  }
+  .ll-reading-time strong {
+    color: rgba(214,205,184,0.7);
+    font-weight: 500;
+  }
+  .ll-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .ll-tag {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba(196,122,34,0.15);
+    border: 1px solid rgba(196,122,34,0.3);
+    color: var(--color-accent);
+    padding: 0.25rem 0.65rem;
+    border-radius: 2px;
+  }
+
+  /* ── Insight Aside ── */
+  .insight {
+    display: grid;
+    grid-template-columns: 3px 1fr;
+    gap: 1.25rem;
+    margin: 2.5rem 0;
+  }
+  .insight-bar {
+    background: var(--color-accent);
+    border-radius: 2px;
+  }
+  .insight-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+  }
+  .insight-body p {
+    font-size: 0.95rem !important;
+    color: var(--color-text-muted) !important;
+    max-width: none !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* ── Tool Grid ── */
+  .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .tool-card {
+    background: var(--color-bg-dark);
+    padding: 1.1rem 1.25rem;
+    border-radius: 2px;
+    border-top: 2px solid var(--color-accent);
+  }
+  .tool-name {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+  .tool-role {
+    font-size: 0.82rem;
+    color: rgba(214,205,184,0.7);
+    line-height: 1.5;
+  }
+  .tool-net {
+    margin-top: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(196,122,34,0.6);
+  }
+
+  /* ── Container Stack Diagram ── */
+  .stack {
+    margin: 2rem 0;
+    border: 1px solid var(--color-rule);
+  }
+  .stack-layer {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    border-bottom: 1px solid var(--color-rule);
+  }
+  .stack-layer:last-child { border-bottom: none; }
+  .stack-label {
+    background: var(--color-bg-dark);
+    padding: 0.8rem 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    border-right: 1px solid rgba(196,122,34,0.2);
+  }
+  .stack-items {
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+    align-items: center;
+  }
+  .stack-item {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    background: rgba(69,15,0,0.07);
+    color: var(--color-bg-dark);
+    padding: 0.2rem 0.5rem;
+    border-radius: 2px;
+    border: 1px solid var(--color-rule);
+  }
+  @media (max-width: 560px) {
+    .stack-layer { grid-template-columns: 1fr; }
+    .stack-label { border-right: none; border-bottom: 1px solid rgba(196,122,34,0.2); }
+  }
+
+  /* ── Hardware Cards Grid ── */
+  .hw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .hw-card {
+    border: 1px solid var(--color-rule);
+    padding: 1.25rem;
+    background: rgba(26,18,8,0.03);
+    border-radius: 2px;
+  }
+  .hw-name {
+    font-family: var(--font-heading) !important;
+    font-size: 1rem !important;
+    font-weight: 700;
+    color: var(--color-bg-dark) !important;
+    margin-bottom: 0.3rem;
+  }
+  .hw-tier {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+  }
+  .hw-body {
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+  }
+  .hw-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--color-accent) !important;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* ── Pull Quote ── */
+  .pullquote {
+    border-left: 4px solid var(--color-accent);
+    margin: 2.5rem 0;
+    padding: 1.25rem 1.75rem;
+    background: rgba(196,122,34,0.06);
+  }
+  .pullquote p {
+    font-family: var(--font-heading) !important;
+    font-style: italic;
+    font-size: 1.2rem !important;
+    color: var(--color-bg-dark) !important;
+    line-height: 1.5;
+    max-width: none !important;
+    margin-bottom: 0 !important;
+  }
+  .pullquote cite {
+    display: block;
+    margin-top: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-style: normal;
+  }
+
+  /* ── Dark Callout ── */
+  .callout-dark {
+    background: var(--color-bg-dark);
+    padding: 1.5rem 1.75rem;
+    margin: 2.5rem 0;
+    border-radius: 2px;
+  }
+  .callout-dark .callout-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+  }
+  .callout-dark p {
+    font-size: 0.92rem !important;
+    color: rgba(214,205,184,0.82) !important;
+    line-height: 1.65;
+    max-width: none !important;
+    margin-top: 0.5rem;
+  }
+  .callout-dark p + p { margin-top: 0.75rem; }
+  .callout-dark a { color: var(--color-accent) !important; }
+
+  /* ── Spec Table (with status cells) ── */
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.88rem;
+  }
+  .spec-table th {
+    background: var(--color-bg-dark);
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.67rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0.65rem 1rem;
+    border: 1px solid rgba(196,122,34,0.2);
+  }
+  .spec-table td {
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--color-rule);
+    vertical-align: top;
+    color: var(--color-text);
+    line-height: 1.5;
+  }
+  .spec-table tr:nth-child(even) td { background: rgba(26,18,8,0.04); }
+  .spec-table td.good { color: #1a5c38; font-weight: 600; font-family: var(--font-mono); font-size: 0.82em; }
+  .spec-table td.bad  { color: #7b1818; font-weight: 600; font-family: var(--font-mono); font-size: 0.82em; }
+
+  /* ── Image pair wrapper ── */
+  .img-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin: 2rem 0;
+  }
+  .img-pair .gallery-item { margin: 0; }
+  @media (max-width: 600px) {
+    .img-pair { grid-template-columns: 1fr; }
+  }
 </style>
 
-<!-- Header Band -->
+{{ if .Params.standfirst }}
+<!-- Hero Header (standfirst variant) -->
+<header class="ll-hero">
+  {{ with .Params.kicker }}
+  <div class="ll-kicker">{{ . }}</div>
+  {{ end }}
+  {{ if .Params.title_html }}
+    <h1 class="ll-hero-title">{{ .Params.title_html | safeHTML }}</h1>
+  {{ else }}
+    <h1 class="ll-hero-title">{{ .Title }}</h1>
+  {{ end }}
+  <p class="ll-standfirst">{{ .Params.standfirst }}</p>
+  <div class="ll-hero-meta">
+    {{ with .Params.reading_time }}
+    <span class="ll-reading-time"><strong>Reading time</strong> · {{ . }}</span>
+    {{ end }}
+    {{ with .Params.tags }}
+    <div class="ll-tag-list">
+      {{ range . }}<span class="ll-tag">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+  </div>
+</header>
+{{ else }}
+<!-- Standard Header Band -->
 <header class="ll-header">
   {{ with .Params.series }}
     <span class="ll-series">series: {{ . }}</span>
@@ -381,6 +731,7 @@
     <span class="ll-byline">by {{ . }}<span class="ll-byline-date"> · {{ $.Date.Format "2 January 2006" }}</span></span>
   {{ end }}
 </header>
+{{ end }}
 
 <!-- Disclosure Banner -->
 {{ if .Params.disclosure }}
