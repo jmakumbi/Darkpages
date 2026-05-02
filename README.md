@@ -57,7 +57,9 @@ This is not a website. It's a collection of self-contained pages that share a do
 │   ├── opus-juris/
 │   ├── firewalla-homelab/
 │   ├── firewalla-reflash/
-│   └── vapt-appliance-zimaboard2/
+│   ├── vapt-appliance-zimaboard2/
+│   ├── fireguard/
+│   └── firewalla-gold-se/
 ├── static/robots.txt                  # Disallow: /
 ├── scripts/strip-exif.py              # EXIF metadata stripping utility
 ├── .github/workflows/deploy.yml       # GitHub Actions deploy pipeline
@@ -82,6 +84,8 @@ This is not a website. It's a collection of self-contained pages that share a do
 | ZimaBoard 832 Unboxing | [/zimaboard-832-unboxing/](https://billableonline.co/zimaboard-832-unboxing/) |
 | Firewalla Gold SE Reflash | [/firewalla-reflash/](https://billableonline.co/firewalla-reflash/) |
 | VAPT Appliance: ZimaBoard2 | [/vapt-appliance-zimaboard2/](https://billableonline.co/vapt-appliance-zimaboard2/) |
+| FireGuard AI Security Dashboard | [/fireguard/](https://billableonline.co/fireguard/) |
+| Firewalla Gold SE | [/firewalla-gold-se/](https://billableonline.co/firewalla-gold-se/) |
 
 ## Page Layouts
 

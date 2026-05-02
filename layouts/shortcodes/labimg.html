@@ -1,6 +1,7 @@
 {{ $src := .Get "src" }}
 {{ $caption := .Get "caption" }}
 {{ $id := .Get "id" }}
+{{ $portrait := .Get "portrait" }}
 {{ $img := .Page.Resources.GetMatch $src }}
 {{ if $img }}
   {{ $thumbW := 800 }}{{ if lt $img.Width 800 }}{{ $thumbW = $img.Width }}{{ end }}
@@ -9,6 +10,7 @@
   {{ $thumbJpeg := $img.Resize (printf "%dx jpg q76" $thumbW) }}
   {{ $fullWebp := $img.Resize (printf "%dx webp q82" $fullW) }}
   {{ $fullJpeg := $img.Resize (printf "%dx jpg q76" $fullW) }}
+  {{ if eq $portrait "true" }}<div class="portrait-img">{{ end }}
   <figure class="gallery-item">
     <a href="#{{ $id }}">
       <picture>
@@ -22,6 +24,7 @@
     </a>
     <figcaption>{{ $caption }}</figcaption>
   </figure>
+  {{ if eq $portrait "true" }}</div>{{ end }}
   <div id="{{ $id }}" class="lightbox">
     <a href="#" class="lb-close">&#10005;</a>
     <picture>

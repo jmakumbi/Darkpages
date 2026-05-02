@@ -123,6 +123,8 @@ New page briefs go in `prompt/`. Completed briefs are archived in `completed pro
 | zimaboard-832-unboxing | /zimaboard-832-unboxing/ | lab-log |
 | firewalla-reflash | /firewalla-reflash/ | lab-log |
 | vapt-appliance-zimaboard2 | /vapt-appliance-zimaboard2/ | lab-log |
+| fireguard | /fireguard/ | lab-log |
+| firewalla-gold-se | /firewalla-gold-se/ | lab-log |
 
 ## Brand Tokens (DO NOT change without user request)
 
