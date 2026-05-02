@@ -173,8 +173,7 @@
   }
   .gallery-item img {
     width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
+    height: auto;
     display: block;
   }
   .gallery-item figcaption {
@@ -294,6 +293,47 @@
     height: 400px;
     object-fit: cover;
     object-position: top center;
+  }
+
+  /* ── Portrait Image (mobile screenshots, max 380px centred) ── */
+  .portrait-img {
+    max-width: 380px;
+    margin: 1.5rem auto;
+    display: block;
+  }
+  .portrait-img .gallery-item img {
+    aspect-ratio: unset;
+    object-fit: initial;
+  }
+
+  /* ── Opening Aside ── */
+  .opening-aside {
+    border-left: 2px solid var(--color-accent);
+    padding-left: 0.85rem;
+    font-style: italic;
+    opacity: 0.75;
+    font-size: 0.92rem;
+    margin-bottom: 2rem;
+  }
+
+  /* ── Upcoming / Coming Next block ── */
+  .upcoming {
+    background: var(--color-bg-dark);
+    color: var(--color-text-inv);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .upcoming strong {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    display: block;
+    margin-bottom: 0.5rem;
   }
 
   /* ── Stats Band ── */
