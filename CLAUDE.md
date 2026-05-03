@@ -127,6 +127,8 @@ New page briefs go in `prompt/`. Completed briefs are archived in `completed pro
 | firewalla-gold-se | /firewalla-gold-se/ | lab-log |
 | zimablade-7700-unboxing | /zimablade-7700-unboxing/ | lab-log |
 | zimaboard-2-unboxing | /zimaboard-2-unboxing/ | lab-log |
+| visionfive2-unboxing | /visionfive2-unboxing/ | lab-log |
+| ai-in-your-practice | /ai-in-your-practice/ | article |
 
 ## Brand Tokens (DO NOT change without user request)
 
