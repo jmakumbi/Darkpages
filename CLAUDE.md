@@ -125,6 +125,8 @@ New page briefs go in `prompt/`. Completed briefs are archived in `completed pro
 | vapt-appliance-zimaboard2 | /vapt-appliance-zimaboard2/ | lab-log |
 | fireguard | /fireguard/ | lab-log |
 | firewalla-gold-se | /firewalla-gold-se/ | lab-log |
+| zimablade-7700-unboxing | /zimablade-7700-unboxing/ | lab-log |
+| zimaboard-2-unboxing | /zimaboard-2-unboxing/ | lab-log |
 
 ## Brand Tokens (DO NOT change without user request)
 
@@ -152,6 +154,8 @@ New page briefs go in `prompt/`. Completed briefs are archived in `completed pro
 - `callout` — highlighted callout block
 - `pullquote` — pull quote styling
 - `stamp` — status/label stamp
+- `rule-box` — bordered content block for key rules or highlighted principles (`inner` content)
+- `three-check-rule` — 3-card Verify/Review/Own It checklist (no params; hardcoded to AI-in-legal-practice context)
 
 ## Constraints (always enforce)
 

@@ -45,7 +45,9 @@ This is not a website. It's a collection of self-contained pages that share a do
 │       ├── m365-screenshot.html       # M365 admin screenshot
 │       ├── callout.html               # Highlighted callout block
 │       ├── pullquote.html             # Pull quote
-│       └── stamp.html                 # Status/label stamp
+│       ├── stamp.html                 # Status/label stamp
+│       ├── rule-box.html              # Bordered content block for key rules
+│       └── three-check-rule.html      # 3-card AI verification checklist (article-specific)
 ├── content/pages/                     # All pages as Hugo leaf bundles
 │   ├── zimacube-2-pro-unboxing/
 │   ├── viral-messages-qui-bono/
@@ -59,7 +61,9 @@ This is not a website. It's a collection of self-contained pages that share a do
 │   ├── firewalla-reflash/
 │   ├── vapt-appliance-zimaboard2/
 │   ├── fireguard/
-│   └── firewalla-gold-se/
+│   ├── firewalla-gold-se/
+│   ├── zimablade-7700-unboxing/
+│   └── zimaboard-2-unboxing/
 ├── static/robots.txt                  # Disallow: /
 ├── scripts/strip-exif.py              # EXIF metadata stripping utility
 ├── .github/workflows/deploy.yml       # GitHub Actions deploy pipeline
@@ -86,6 +90,8 @@ This is not a website. It's a collection of self-contained pages that share a do
 | VAPT Appliance: ZimaBoard2 | [/vapt-appliance-zimaboard2/](https://billableonline.co/vapt-appliance-zimaboard2/) |
 | FireGuard AI Security Dashboard | [/fireguard/](https://billableonline.co/fireguard/) |
 | Firewalla Gold SE | [/firewalla-gold-se/](https://billableonline.co/firewalla-gold-se/) |
+| ZimaBlade 7700 Unboxing | [/zimablade-7700-unboxing/](https://billableonline.co/zimablade-7700-unboxing/) |
+| ZimaBoard 2 1664 Unboxing | [/zimaboard-2-unboxing/](https://billableonline.co/zimaboard-2-unboxing/) |
 
 ## Page Layouts
 
