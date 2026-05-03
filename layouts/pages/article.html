@@ -255,6 +255,92 @@
     margin-bottom: 0;
     line-height: 1.6;
   }
+  .callout.warning {
+    border-color: rgba(139,26,0,0.8);
+    background: rgba(139,26,0,0.06);
+    font-style: normal;
+  }
+  .callout.tip {
+    border-color: rgba(58,107,64,0.8);
+    background: rgba(58,107,64,0.06);
+    font-style: normal;
+  }
+  .callout.reference {
+    border-color: rgba(69,15,0,0.4);
+    background: var(--color-card);
+    font-style: normal;
+  }
+  .callout-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+    display: block;
+    color: var(--color-accent);
+  }
+  .callout.warning .callout-label { color: rgba(139,26,0,0.9); }
+  .callout.tip    .callout-label { color: rgba(58,107,64,0.9); }
+
+  /* ── Rule Box ── */
+  .rule-box {
+    background: var(--color-bg-dark);
+    color: var(--color-text-inv);
+    padding: 1.5rem 1.75rem;
+    border-radius: 4px;
+    margin: 2rem 0;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    line-height: 1.45;
+    text-align: center;
+  }
+  .rule-box em { font-style: normal; color: var(--color-accent); }
+  .rule-box p  { font-family: var(--font-heading); font-size: 1.2rem; margin: 0; color: var(--color-text-inv); }
+
+  /* ── 3-Check Rule ── */
+  .check-rule {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  @media (min-width: 600px) {
+    .check-rule { grid-template-columns: repeat(3, 1fr); }
+  }
+  .check-card {
+    background: var(--color-bg-dark);
+    color: var(--color-text-inv);
+    padding: 1.25rem 1.1rem;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .check-num {
+    font-family: var(--font-mono);
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    display: block;
+    margin-bottom: 0.4rem;
+    line-height: 1;
+  }
+  .check-word {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-text-inv);
+    display: block;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.04em;
+  }
+  .check-card p {
+    font-size: 0.82rem;
+    opacity: 0.8;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* ── Three Zones Table ── */
+  .zones-table thead th:nth-child(2) { background: rgba(45,90,45,0.85); }
+  .zones-table thead th:nth-child(3) { background: rgba(26,58,106,0.85); }
+  .zones-table thead th:nth-child(4) { background: rgba(139,26,0,0.85); }
 
   /* ── Pull Quote ── */
   .pullquote {

@@ -1,1 +1,3 @@
-<div class="callout">{{ .Inner | markdownify }}</div>
+{{ $type := .Get "type" | default "" }}
+{{ $label := .Get "label" | default "" }}
+<div class="callout{{ if $type }} {{ $type }}{{ end }}">{{ if $label }}<span class="callout-label">{{ $label }}</span>{{ end }}{{ .Inner | markdownify }}</div>
