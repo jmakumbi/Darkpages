@@ -63,7 +63,9 @@ This is not a website. It's a collection of self-contained pages that share a do
 │   ├── fireguard/
 │   ├── firewalla-gold-se/
 │   ├── zimablade-7700-unboxing/
-│   └── zimaboard-2-unboxing/
+│   ├── zimaboard-2-unboxing/
+│   ├── visionfive2-unboxing/
+│   └── ai-in-your-practice/
 ├── static/robots.txt                  # Disallow: /
 ├── scripts/strip-exif.py              # EXIF metadata stripping utility
 ├── .github/workflows/deploy.yml       # GitHub Actions deploy pipeline
@@ -92,6 +94,8 @@ This is not a website. It's a collection of self-contained pages that share a do
 | Firewalla Gold SE | [/firewalla-gold-se/](https://billableonline.co/firewalla-gold-se/) |
 | ZimaBlade 7700 Unboxing | [/zimablade-7700-unboxing/](https://billableonline.co/zimablade-7700-unboxing/) |
 | ZimaBoard 2 1664 Unboxing | [/zimaboard-2-unboxing/](https://billableonline.co/zimaboard-2-unboxing/) |
+| VisionFive 2 Unboxing | [/visionfive2-unboxing/](https://billableonline.co/visionfive2-unboxing/) |
+| AI in Your Practice | [/ai-in-your-practice/](https://billableonline.co/ai-in-your-practice/) |
 
 ## Page Layouts
 
