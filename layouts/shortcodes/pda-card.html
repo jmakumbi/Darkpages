@@ -1,0 +1,12 @@
+{{ $logo := .Page.Resources.GetMatch "paulette-logo.png" }}
+<div class="pda-card">
+  {{ if $logo }}
+  <img class="pda-logo" src="{{ $logo.RelPermalink }}" alt="Paulette Decor Arts logo" width="72" loading="lazy">
+  {{ end }}
+  <div class="pda-card-body">
+    <strong>Paulette Decor Arts</strong>
+    <p>A Kampala-based fabrication studio covering custom woodwork, precision metalwork, vinyl and branding, and advanced 3D printing. Their tagline is <em>Byona Tubikola</em> — "we make it all." It is not marketing hyperbole. They mean every word of it.</p>
+    <a href="https://paulettedecorarts.com/about-pda/" target="_blank" rel="noopener">paulettedecorarts.com →</a>
+    <span class="pda-tagline">Byona Tubikola — We make it all.</span>
+  </div>
+</div>

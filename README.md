@@ -65,7 +65,9 @@ This is not a website. It's a collection of self-contained pages that share a do
 │   ├── zimablade-7700-unboxing/
 │   ├── zimaboard-2-unboxing/
 │   ├── visionfive2-unboxing/
-│   └── ai-in-your-practice/
+│   ├── ai-in-your-practice/
+│   ├── deskpi-rackmate-t1/
+│   └── dark-gate-rack-build/
 ├── static/robots.txt                  # Disallow: /
 ├── scripts/strip-exif.py              # EXIF metadata stripping utility
 ├── .github/workflows/deploy.yml       # GitHub Actions deploy pipeline
@@ -96,6 +98,8 @@ This is not a website. It's a collection of self-contained pages that share a do
 | ZimaBoard 2 1664 Unboxing | [/zimaboard-2-unboxing/](https://billableonline.co/zimaboard-2-unboxing/) |
 | VisionFive 2 Unboxing | [/visionfive2-unboxing/](https://billableonline.co/visionfive2-unboxing/) |
 | AI in Your Practice | [/ai-in-your-practice/](https://billableonline.co/ai-in-your-practice/) |
+| DeskPi RackMate T1 Unboxing | [/deskpi-rackmate-t1/](https://billableonline.co/deskpi-rackmate-t1/) |
+| Dark-Gate Rack Build | [/dark-gate-rack-build/](https://billableonline.co/dark-gate-rack-build/) |
 
 ## Page Layouts
 
