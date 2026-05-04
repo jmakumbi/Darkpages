@@ -31,7 +31,7 @@ This is not a website. It's a collection of self-contained pages that share a do
 ├── layouts/
 │   ├── _default/baseof.html           # Clean base layout (no navbar, no footer)
 │   ├── index.html                     # "Members only" gate page
-│   ├── partials/head.html             # Google Fonts, noindex meta, brand CSS
+│   ├── partials/head.html             # Google Fonts, noindex meta, brand CSS, favicon
 │   ├── pages/
 │   │   ├── lab-log.html               # Image-heavy equipment/homelab pages
 │   │   ├── article.html               # Long-form writing and product explainers
@@ -68,6 +68,7 @@ This is not a website. It's a collection of self-contained pages that share a do
 │   ├── ai-in-your-practice/
 │   ├── deskpi-rackmate-t1/
 │   └── dark-gate-rack-build/
+├── static/favicon.svg                 # Site favicon (SVG)
 ├── static/robots.txt                  # Disallow: /
 ├── scripts/strip-exif.py              # EXIF metadata stripping utility
 ├── .github/workflows/deploy.yml       # GitHub Actions deploy pipeline
