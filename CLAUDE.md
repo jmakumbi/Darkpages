@@ -160,11 +160,13 @@ New page briefs go in `prompt/`. Completed briefs are archived in `completed pro
 - `stamp` — status/label stamp
 - `rule-box` — bordered content block for key rules or highlighted principles (`inner` content)
 - `three-check-rule` — 3-card Verify/Review/Own It checklist (no params; hardcoded to AI-in-legal-practice context)
+- `pda-card` — Paulette Decor Arts feature card with logo, description, and external link (no params; reads `paulette-logo.png` from page resources)
 
 ## Constraints (always enforce)
 
 - No JavaScript — CSS `:target` only for interactivity
 - No analytics beyond GoatCounter pixel — tracking via `gc.billableonline.co/count` (custom domain), suppressed during `hugo server`, configured via `params.goatcounter` in `hugo.yaml`
+- Favicon is `static/favicon.svg` — referenced in `layouts/partials/head.html` as `<link rel="icon" type="image/svg+xml" href="/favicon.svg">`
 - No links to a homepage
 - All colours via CSS variables — never hardcode hex in layouts
 - All images through Hugo's processing pipeline — never reference raw files
