@@ -67,7 +67,8 @@ This is not a website. It's a collection of self-contained pages that share a do
 │   ├── visionfive2-unboxing/
 │   ├── ai-in-your-practice/
 │   ├── deskpi-rackmate-t1/
-│   └── dark-gate-rack-build/
+│   ├── dark-gate-rack-build/
+│   └── dark-gate-rack-upgrade/
 ├── static/favicon.svg                 # Site favicon (SVG)
 ├── static/robots.txt                  # Disallow: /
 ├── scripts/strip-exif.py              # EXIF metadata stripping utility
@@ -101,6 +102,7 @@ This is not a website. It's a collection of self-contained pages that share a do
 | AI in Your Practice | [/ai-in-your-practice/](https://billableonline.co/ai-in-your-practice/) |
 | DeskPi RackMate T1 Unboxing | [/deskpi-rackmate-t1/](https://billableonline.co/deskpi-rackmate-t1/) |
 | Dark-Gate Rack Build | [/dark-gate-rack-build/](https://billableonline.co/dark-gate-rack-build/) |
+| Dark-Gate Rack Upgrade | [/dark-gate-rack-upgrade/](https://billableonline.co/dark-gate-rack-upgrade/) |
 
 ## Page Layouts
 
