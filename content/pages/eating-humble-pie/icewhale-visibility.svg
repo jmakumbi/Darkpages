@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+  <rect width="900" height="900" fill="#d6cdb8"></rect>
+  <text x="450" y="54" text-anchor="middle" font-family="Georgia, serif" font-size="21" font-weight="700" fill="#450f00">What IceWhale Can Actually See</text>
+
+  
+  <text x="245" y="104" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" font-weight="700" letter-spacing="0.06em" fill="#c47a22">YOUR TRAFFIC</text>
+  <text x="655" y="104" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" font-weight="700" letter-spacing="0.06em" fill="#c47a22">YOUR MEMBERSHIP LIST</text>
+
+  
+  <rect x="125" y="130" width="240" height="70" rx="5" fill="#e8e2d4" stroke="#450f00" stroke-opacity="0.2"></rect>
+  <text x="245" y="160" text-anchor="middle" font-family="'Courier New', monospace" font-size="10.5" fill="#450f00">Rides ZeroTier Inc.'s own</text>
+  <text x="245" y="176" text-anchor="middle" font-family="'Courier New', monospace" font-size="10.5" fill="#450f00">public root servers</text>
+
+  <line x1="245" y1="200" x2="245" y2="234" stroke="#450f00" stroke-opacity="0.4" stroke-width="1.5"></line>
+  <polygon points="245,234 238,222 252,222" fill="#450f00" fill-opacity="0.4"></polygon>
+
+  <rect x="125" y="240" width="240" height="70" rx="5" fill="#e8e2d4" stroke="#450f00" stroke-opacity="0.2"></rect>
+  <text x="245" y="270" text-anchor="middle" font-family="'Courier New', monospace" font-size="10.5" fill="#450f00">IceWhale runs neither the</text>
+  <text x="245" y="286" text-anchor="middle" font-family="'Courier New', monospace" font-size="10.5" fill="#450f00">controller nor the relays</text>
+
+  <line x1="245" y1="310" x2="245" y2="344" stroke="#450f00" stroke-opacity="0.4" stroke-width="1.5"></line>
+  <polygon points="245,344 238,332 252,332" fill="#450f00" fill-opacity="0.4"></polygon>
+
+  <rect x="105" y="350" width="280" height="86" rx="5" fill="#450f00" stroke="#1a5c38" stroke-width="2"></rect>
+  <text x="245" y="384" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#8fd6ac">✓ NEVER BROKERS OR SEES IT</text>
+  <text x="245" y="404" text-anchor="middle" font-family="'Courier New', monospace" font-size="9.5" fill="#d6cdb8" fill-opacity="0.75">verified at the transport layer</text>
+  <text x="245" y="418" text-anchor="middle" font-family="'Courier New', monospace" font-size="9.5" fill="#d6cdb8" fill-opacity="0.75">not just taken on trust</text>
+
+  
+  <rect x="535" y="130" width="240" height="70" rx="5" fill="#e8e2d4" stroke="#450f00" stroke-opacity="0.2"></rect>
+  <text x="655" y="160" text-anchor="middle" font-family="'Courier New', monospace" font-size="10.5" fill="#450f00">ZimaOS binary decompiled</text>
+  <text x="655" y="176" text-anchor="middle" font-family="'Courier New', monospace" font-size="10.5" fill="#450f00">— every function traced</text>
+
+  <line x1="655" y1="200" x2="655" y2="234" stroke="#450f00" stroke-opacity="0.4" stroke-width="1.5"></line>
+  <polygon points="655,234 648,222 662,222" fill="#450f00" fill-opacity="0.4"></polygon>
+
+  <rect x="535" y="240" width="240" height="70" rx="5" fill="#e8e2d4" stroke="#450f00" stroke-opacity="0.2"></rect>
+  <text x="655" y="270" text-anchor="middle" font-family="'Courier New', monospace" font-size="10.5" fill="#450f00">Outbound calls: OS update</text>
+  <text x="655" y="286" text-anchor="middle" font-family="'Courier New', monospace" font-size="10.5" fill="#450f00">checks + forum announcements</text>
+
+  <line x1="655" y1="310" x2="655" y2="344" stroke="#450f00" stroke-opacity="0.4" stroke-width="1.5"></line>
+  <polygon points="655,344 648,332 662,332" fill="#450f00" fill-opacity="0.4"></polygon>
+
+  <rect x="515" y="350" width="280" height="86" rx="5" fill="#450f00" stroke="#1a5c38" stroke-width="2"></rect>
+  <text x="655" y="384" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#8fd6ac">✓ NO UPLOAD CODE PATH</text>
+  <text x="655" y="404" text-anchor="middle" font-family="'Courier New', monospace" font-size="9.5" fill="#d6cdb8" fill-opacity="0.75">confirmed by static analysis</text>
+  <text x="655" y="418" text-anchor="middle" font-family="'Courier New', monospace" font-size="9.5" fill="#d6cdb8" fill-opacity="0.75">of the binary itself</text>
+
+  <rect x="60" y="470" width="780" height="1" fill="#450f00" fill-opacity="0.15"></rect>
+  <text x="450" y="500" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#450f00">Two independent checks. Both came back clean.</text>
+  <text x="450" y="524" text-anchor="middle" font-family="'Courier New', monospace" font-size="10.5" fill="#450f00" fill-opacity="0.6" font-style="italic">That's not benefit of the doubt — it's a verified result.</text>
+</svg>
