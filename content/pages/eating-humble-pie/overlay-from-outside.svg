@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700">
+  <rect width="1600" height="700" fill="#d6cdb8"></rect>
+  <text x="800" y="56" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#450f00">The Overlay, From Outside</text>
+
+  <ellipse cx="800" cy="400" rx="560" ry="230" fill="none" stroke="#c47a22" stroke-width="2" stroke-dasharray="10,8" stroke-opacity="0.55"></ellipse>
+
+  
+  <circle cx="620" cy="300" r="9" fill="#450f00" fill-opacity="0.55"></circle>
+  <circle cx="700" cy="470" r="7" fill="#450f00" fill-opacity="0.45"></circle>
+  <circle cx="560" cy="420" r="6" fill="#450f00" fill-opacity="0.4"></circle>
+  <circle cx="900" cy="320" r="8" fill="#450f00" fill-opacity="0.5"></circle>
+  <circle cx="980" cy="440" r="6" fill="#450f00" fill-opacity="0.4"></circle>
+  <circle cx="850" cy="500" r="7" fill="#450f00" fill-opacity="0.45"></circle>
+  <circle cx="1020" cy="360" r="9" fill="#450f00" fill-opacity="0.55"></circle>
+  <circle cx="760" cy="380" r="10" fill="#450f00" fill-opacity="0.6"></circle>
+  <circle cx="670" cy="230" r="6" fill="#450f00" fill-opacity="0.35"></circle>
+  <circle cx="940" cy="250" r="7" fill="#450f00" fill-opacity="0.4"></circle>
+  <circle cx="1080" cy="420" r="6" fill="#450f00" fill-opacity="0.35"></circle>
+  <circle cx="520" cy="350" r="7" fill="#450f00" fill-opacity="0.42"></circle>
+
+  
+  <line x1="270" y1="600" x2="440" y2="470" stroke="#c47a22" stroke-width="2.5"></line>
+  <polygon points="440,470 420,464 430,485" fill="#c47a22"></polygon>
+
+  <circle cx="250" cy="615" r="16" fill="#c47a22"></circle>
+  <text x="250" y="611" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" font-weight="700" fill="#d6cdb8">NEW</text>
+  <text x="250" y="622" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" font-weight="700" fill="#d6cdb8">PEER</text>
+  <text x="250" y="650" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#450f00" font-style="italic">holds the 16-hex ID</text>
+
+  <text x="800" y="662" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#450f00" fill-opacity="0.6">Anyone with the network ID crosses this line automatically — no approval step, no notice.</text>
+</svg>

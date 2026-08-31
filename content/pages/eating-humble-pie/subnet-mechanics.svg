@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1000">
+  <rect width="900" height="1000" fill="#d6cdb8"></rect>
+  <text x="450" y="54" text-anchor="middle" font-family="Georgia, serif" font-size="21" font-weight="700" fill="#450f00">ZeroTier Subnets vs. IceWhale's Defaults</text>
+
+  
+  <rect x="60" y="90" width="780" height="50" fill="#450f00"></rect>
+  <text x="440" y="120" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" letter-spacing="0.06em" fill="#d6cdb8" fill-opacity="0.7">MECHANIC</text>
+  <text x="565" y="120" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" letter-spacing="0.06em" fill="#c47a22">STANDARD ZEROTIER SUBNET</text>
+  <text x="565" y="120" font-family="'Courier New', monospace" font-size="0"></text>
+  <text x="720" y="120" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" letter-spacing="0.05em" fill="#c47a22">ICEWHALE'S IMPLEMENTATION</text>
+  <line x1="330" y1="90" x2="330" y2="820" stroke="#d6cdb8" stroke-opacity="0.3"></line>
+  <line x1="595" y1="90" x2="595" y2="820" stroke="#450f00" stroke-opacity="0.15"></line>
+
+  
+  <rect x="60" y="140" width="780" height="100" fill="#e8e2d4"></rect>
+  <text x="90" y="184" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#450f00">Controller</text>
+  <text x="345" y="176" font-family="'Courier New', monospace" font-size="10" fill="#450f00">Cloud-hosted or</text>
+  <text x="345" y="192" font-family="'Courier New', monospace" font-size="10" fill="#450f00">self-hosted — operator's choice</text>
+  <text x="610" y="176" font-family="'Courier New', monospace" font-size="10" fill="#450f00">Self-hosted, on the device</text>
+  <text x="610" y="192" font-family="'Courier New', monospace" font-size="10" fill="#450f00">itself — no choice offered</text>
+
+  
+  <rect x="60" y="240" width="780" height="100" fill="#d6cdb8"></rect>
+  <text x="90" y="284" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#450f00">Who sees traffic</text>
+  <text x="345" y="276" font-family="'Courier New', monospace" font-size="10" fill="#450f00">Depends who runs the</text>
+  <text x="345" y="292" font-family="'Courier New', monospace" font-size="10" fill="#450f00">controller and relays</text>
+  <text x="610" y="276" font-family="'Courier New', monospace" font-size="10" fill="#1a5c38" font-weight="700">Only ZeroTier Inc.'s roots —</text>
+  <text x="610" y="292" font-family="'Courier New', monospace" font-size="10" fill="#1a5c38" font-weight="700">IceWhale verified not in path</text>
+
+  
+  <rect x="60" y="340" width="780" height="100" fill="#e8e2d4"></rect>
+  <text x="90" y="384" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#450f00">Default join policy</text>
+  <text x="345" y="376" font-family="'Courier New', monospace" font-size="10" fill="#450f00">Private by default;</text>
+  <text x="345" y="392" font-family="'Courier New', monospace" font-size="10" fill="#450f00">public is an admin choice</text>
+  <text x="610" y="376" font-family="'Courier New', monospace" font-size="10" fill="#7b1818" font-weight="700">PUBLIC by default,</text>
+  <text x="610" y="392" font-family="'Courier New', monospace" font-size="10" fill="#7b1818" font-weight="700">on every device, no toggle shown</text>
+
+  
+  <rect x="60" y="440" width="780" height="100" fill="#d6cdb8"></rect>
+  <text x="90" y="484" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#450f00">Approval step</text>
+  <text x="345" y="476" font-family="'Courier New', monospace" font-size="10" fill="#450f00">Controller can require</text>
+  <text x="345" y="492" font-family="'Courier New', monospace" font-size="10" fill="#450f00">manual member authorization</text>
+  <text x="610" y="476" font-family="'Courier New', monospace" font-size="10" fill="#7b1818" font-weight="700">None — anyone with the ID</text>
+  <text x="610" y="492" font-family="'Courier New', monospace" font-size="10" fill="#7b1818" font-weight="700">auto-joins immediately</text>
+
+  
+  <rect x="60" y="540" width="780" height="100" fill="#e8e2d4"></rect>
+  <text x="90" y="584" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#450f00">On network reset</text>
+  <text x="345" y="576" font-family="'Courier New', monospace" font-size="10" fill="#450f00">Depends on how the</text>
+  <text x="345" y="592" font-family="'Courier New', monospace" font-size="10" fill="#450f00">new network is configured</text>
+  <text x="610" y="576" font-family="'Courier New', monospace" font-size="10" fill="#7b1818" font-weight="700">Evicts members, but the fresh</text>
+  <text x="610" y="592" font-family="'Courier New', monospace" font-size="10" fill="#7b1818" font-weight="700">network is public again too</text>
+
+  <rect x="60" y="660" width="780" height="1" fill="#450f00" fill-opacity="0.15"></rect>
+  <text x="450" y="694" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#450f00">The protocol offers a private, approval-gated mode. IceWhale never wires it in.</text>
+</svg>

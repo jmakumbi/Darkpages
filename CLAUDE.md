@@ -132,6 +132,7 @@ New page briefs go in `prompt/`. Completed briefs are archived in `completed pro
 | deskpi-rackmate-t1 | /deskpi-rackmate-t1/ | lab-log |
 | dark-gate-rack-build | /dark-gate-rack-build/ | lab-log |
 | dark-gate-rack-upgrade | /dark-gate-rack-upgrade/ | lab-log |
+| eating-humble-pie | /eating-humble-pie/ | lab-log |
 
 ## Brand Tokens (DO NOT change without user request)
 

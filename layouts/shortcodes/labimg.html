@@ -4,32 +4,53 @@
 {{ $portrait := .Get "portrait" }}
 {{ $img := .Page.Resources.GetMatch $src }}
 {{ if $img }}
-  {{ $thumbW := 800 }}{{ if lt $img.Width 800 }}{{ $thumbW = $img.Width }}{{ end }}
-  {{ $fullW := 1400 }}{{ if lt $img.Width 1400 }}{{ $fullW = $img.Width }}{{ end }}
-  {{ $thumbWebp := $img.Resize (printf "%dx webp q82" $thumbW) }}
-  {{ $thumbJpeg := $img.Resize (printf "%dx jpg q76" $thumbW) }}
-  {{ $fullWebp := $img.Resize (printf "%dx webp q82" $fullW) }}
-  {{ $fullJpeg := $img.Resize (printf "%dx jpg q76" $fullW) }}
-  {{ if eq $portrait "true" }}<div class="portrait-img">{{ end }}
-  <figure class="gallery-item">
-    <a href="#{{ $id }}">
-      <picture>
-        <source srcset="{{ $thumbWebp.RelPermalink }}" type="image/webp">
-        <img src="{{ $thumbJpeg.RelPermalink }}"
+  {{ if eq $img.MediaType.SubType "svg" }}
+    {{ $width := .Get "width" }}
+    {{ $height := .Get "height" }}
+    {{ if eq $portrait "true" }}<div class="portrait-img">{{ end }}
+    <figure class="gallery-item">
+      <a href="#{{ $id }}">
+        <img src="{{ $img.RelPermalink }}"
              alt="{{ $caption }}"
-             width="{{ $thumbJpeg.Width }}"
-             height="{{ $thumbJpeg.Height }}"
+             width="{{ $width }}"
+             height="{{ $height }}"
              loading="lazy">
+      </a>
+      <figcaption>{{ $caption }}</figcaption>
+    </figure>
+    {{ if eq $portrait "true" }}</div>{{ end }}
+    <div id="{{ $id }}" class="lightbox">
+      <a href="#" class="lb-close">&#10005;</a>
+      <img src="{{ $img.RelPermalink }}" alt="{{ $caption }}">
+    </div>
+  {{ else }}
+    {{ $thumbW := 800 }}{{ if lt $img.Width 800 }}{{ $thumbW = $img.Width }}{{ end }}
+    {{ $fullW := 1400 }}{{ if lt $img.Width 1400 }}{{ $fullW = $img.Width }}{{ end }}
+    {{ $thumbWebp := $img.Resize (printf "%dx webp q82" $thumbW) }}
+    {{ $thumbJpeg := $img.Resize (printf "%dx jpg q76" $thumbW) }}
+    {{ $fullWebp := $img.Resize (printf "%dx webp q82" $fullW) }}
+    {{ $fullJpeg := $img.Resize (printf "%dx jpg q76" $fullW) }}
+    {{ if eq $portrait "true" }}<div class="portrait-img">{{ end }}
+    <figure class="gallery-item">
+      <a href="#{{ $id }}">
+        <picture>
+          <source srcset="{{ $thumbWebp.RelPermalink }}" type="image/webp">
+          <img src="{{ $thumbJpeg.RelPermalink }}"
+               alt="{{ $caption }}"
+               width="{{ $thumbJpeg.Width }}"
+               height="{{ $thumbJpeg.Height }}"
+               loading="lazy">
+        </picture>
+      </a>
+      <figcaption>{{ $caption }}</figcaption>
+    </figure>
+    {{ if eq $portrait "true" }}</div>{{ end }}
+    <div id="{{ $id }}" class="lightbox">
+      <a href="#" class="lb-close">&#10005;</a>
+      <picture>
+        <source srcset="{{ $fullWebp.RelPermalink }}" type="image/webp">
+        <img src="{{ $fullJpeg.RelPermalink }}" alt="{{ $caption }}">
       </picture>
-    </a>
-    <figcaption>{{ $caption }}</figcaption>
-  </figure>
-  {{ if eq $portrait "true" }}</div>{{ end }}
-  <div id="{{ $id }}" class="lightbox">
-    <a href="#" class="lb-close">&#10005;</a>
-    <picture>
-      <source srcset="{{ $fullWebp.RelPermalink }}" type="image/webp">
-      <img src="{{ $fullJpeg.RelPermalink }}" alt="{{ $caption }}">
-    </picture>
-  </div>
+    </div>
+  {{ end }}
 {{ end }}
