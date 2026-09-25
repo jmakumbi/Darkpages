@@ -72,7 +72,9 @@ This is not a website. It's a collection of self-contained pages that share a do
 │   └── eating-humble-pie/
 ├── static/favicon.svg                 # Site favicon (SVG)
 ├── static/robots.txt                  # Disallow: /
-├── scripts/strip-exif.py              # EXIF metadata stripping utility
+├── scripts/strip-exif.py              # EXIF/XMP metadata stripping utility (jpg/png/webp)
+├── scripts/check-image-metadata.py    # CI gate: fails on any image with GPS or EXIF
+├── scripts/install-hooks.py           # Installs the local pre-commit metadata check
 ├── .github/workflows/deploy.yml       # GitHub Actions deploy pipeline
 ├── prompt/                            # Active page briefs and source images (gitignored)
 └── completed prompts/                 # Archived briefs for published pages (gitignored)
@@ -139,11 +141,20 @@ hugo server
 ## Deployment
 
 Push to `main` triggers the GitHub Actions workflow:
-1. Hugo builds with `--minify`
-2. `actions/upload-pages-artifact` packages the output
-3. `actions/deploy-pages` deploys to GitHub Pages
+1. `scripts/check-image-metadata.py` rejects any image with GPS or EXIF metadata (build stops on failure)
+2. Hugo builds with `--minify`
+3. `actions/upload-pages-artifact` packages the output
+4. `actions/deploy-pages` deploys to GitHub Pages
 
 Site is live with HTTPS at `billableonline.co` within ~60 seconds.
+
+## Image Hygiene
+
+- Always run `strip-exif.py` on a page bundle before committing images:
+  `python scripts/strip-exif.py content/pages/[slug]/` (add `--recursive` for a whole tree)
+- CI rejects any image in `content/`, `static/` or `assets/` that carries EXIF or GPS metadata — nothing with metadata ever deploys.
+- Never commit raw phone photos to any path, including planning or prompt folders. Git history is permanent; a stripped replacement does not remove the original.
+- Optional local guard: run `python scripts/install-hooks.py` once per clone to add a pre-commit hook that checks staged images.
 
 ## Adding a New Page
 

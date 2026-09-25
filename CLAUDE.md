@@ -17,11 +17,19 @@ A Hugo static site vault — standalone, unlinked pages deployed to GitHub Pages
 ## Deployment Architecture
 
 The workflow (`.github/workflows/deploy.yml`) uses the official GitHub Pages deployment:
-1. `peaceiris/actions-hugo@v3` builds with Hugo extended
-2. `actions/upload-pages-artifact@v3` packages `./public`
-3. `actions/deploy-pages@v4` deploys to GitHub Pages
+1. `scripts/check-image-metadata.py` (Python + Pillow) fails the build if any image carries GPS or EXIF metadata
+2. `peaceiris/actions-hugo@v3` builds with Hugo extended
+3. `actions/upload-pages-artifact@v3` packages `./public`
+4. `actions/deploy-pages@v4` deploys to GitHub Pages
 
 GitHub Pages source is set to **"GitHub Actions"** (not "Deploy from a branch"). Do NOT change this — using branch-based deployment causes the raw `main` content to overwrite the Hugo output.
+
+## Image Hygiene
+
+- Always run `strip-exif.py` on a page bundle before committing images. It handles `.jpg`/`.jpeg`/`.png`/`.webp` (any case), skips already-clean files, and takes `--recursive` for a whole tree.
+- CI rejects any image in `content/`, `static/` or `assets/` with EXIF or GPS metadata (`scripts/check-image-metadata.py`). Run it locally before pushing.
+- Never commit raw phone photos to any path, including planning or prompt folders. Git history is permanent: a later stripped replacement does not remove the original blob (this required a full history rewrite on 25 Sep 2026).
+- Optional: `python scripts/install-hooks.py` once per clone installs a pre-commit hook that checks staged images.
 
 ## Adding a New Post
 
