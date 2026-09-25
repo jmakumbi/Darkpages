@@ -77,7 +77,8 @@ This is not a website. It's a collection of self-contained pages that share a do
 ├── scripts/install-hooks.py           # Installs the local pre-commit metadata check
 ├── .github/workflows/deploy.yml       # GitHub Actions deploy pipeline
 ├── prompt/                            # Active page briefs and source images (gitignored)
-└── completed prompts/                 # Archived briefs for published pages (gitignored)
+├── completed prompts/                 # Archived briefs for published pages (gitignored)
+└── Image Sources/                     # Raw source photos, never committed (gitignored)
 ```
 
 ## Live Pages

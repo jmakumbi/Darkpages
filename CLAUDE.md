@@ -107,7 +107,7 @@ Page goes live at: `https://billableonline.co/[slug]/`
 
 ## Planning Documents
 
-New page briefs go in `prompt/`. Completed briefs are archived in `completed prompts/`. Both folders are gitignored — local only, never pushed to GitHub.
+New page briefs go in `prompt/`. Completed briefs are archived in `completed prompts/`. Raw source photos live in `Image Sources/`. All three folders are gitignored — local only, never pushed to GitHub.
 
 - `completed prompts/PROJECT-README.md` — original architecture overview and brand guide
 - `completed prompts/hugo-darkpages-scaffold.md` — Hugo skeleton build instructions (already executed)
