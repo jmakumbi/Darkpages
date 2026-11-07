@@ -1,6 +1,6 @@
 baseURL: "https://billableonline.co/"
 title: "billableonline.co"
-languageCode: "en-gb"
+locale: "en-gb"
 theme: "hugo-profile"
 
 enableRobotsTXT: false
