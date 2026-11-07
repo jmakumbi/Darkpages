@@ -141,6 +141,7 @@ New page briefs go in `prompt/`. Completed briefs are archived in `completed pro
 | dark-gate-rack-build | /dark-gate-rack-build/ | lab-log |
 | dark-gate-rack-upgrade | /dark-gate-rack-upgrade/ | lab-log |
 | eating-humble-pie | /eating-humble-pie/ | lab-log |
+| home-office-clearout | /home-office-clearout/ | article |
 
 ## Brand Tokens (DO NOT change without user request)
 
@@ -161,7 +162,7 @@ New page briefs go in `prompt/`. Completed briefs are archived in `completed pro
 
 - `labimg` — single image with Hugo processing + CSS lightbox (`src`, `caption`, `id` params) — for `lab-log` pages
 - `gallery` — wraps `labimg` calls in a 2-column CSS grid (1-column on mobile); for portrait screenshots use raw `<div class="gallery-grid gallery-portrait">` instead
-- `screenshot-fig` — full-width pipeline screenshot with caption, uses `.screenshot-fig` CSS class (`src`, `alt`, `caption` params)
+- `screenshot-fig` — full-width pipeline screenshot with caption, uses `.screenshot-fig` CSS class (`src`, `alt`, `caption` params; optional `width`, default `1400` — set `width="800"` for 800 px sources so they are not upscaled)
 - `hw-cards` — hardware product card grid, reads images from page resources, hardcoded to legal-tech-portfolio devices
 - `m365-screenshot` — Microsoft 365 admin screenshot, hardcoded to legal-tech-portfolio
 - `screenshot` — basic image figure without pipeline processing (`src`, `caption`, `fig` params)

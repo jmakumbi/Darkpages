@@ -39,7 +39,7 @@ This is not a website. It's a collection of self-contained pages that share a do
 │   └── shortcodes/
 │       ├── labimg.html                # Image with Hugo processing + CSS lightbox
 │       ├── gallery.html               # 2-column image grid wrapper
-│       ├── screenshot-fig.html        # Full-width pipeline screenshot with caption
+│       ├── screenshot-fig.html        # Full-width pipeline screenshot with caption (optional width, default 1400)
 │       ├── screenshot.html            # Basic figure (no pipeline)
 │       ├── hw-cards.html              # Hardware product card grid
 │       ├── m365-screenshot.html       # M365 admin screenshot
@@ -69,7 +69,8 @@ This is not a website. It's a collection of self-contained pages that share a do
 │   ├── deskpi-rackmate-t1/
 │   ├── dark-gate-rack-build/
 │   ├── dark-gate-rack-upgrade/
-│   └── eating-humble-pie/
+│   ├── eating-humble-pie/
+│   └── home-office-clearout/
 ├── static/favicon.svg                 # Site favicon (SVG)
 ├── static/robots.txt                  # Disallow: /
 ├── scripts/strip-exif.py              # EXIF/XMP metadata stripping utility (jpg/png/webp)
@@ -108,6 +109,7 @@ This is not a website. It's a collection of self-contained pages that share a do
 | Dark-Gate Rack Build | [/dark-gate-rack-build/](https://billableonline.co/dark-gate-rack-build/) |
 | Dark-Gate Rack Upgrade | [/dark-gate-rack-upgrade/](https://billableonline.co/dark-gate-rack-upgrade/) |
 | Eating Humble Pie | [/eating-humble-pie/](https://billableonline.co/eating-humble-pie/) |
+| Clearing the Desk: Kit I'm Letting Go | [/home-office-clearout/](https://billableonline.co/home-office-clearout/) |
 
 ## Page Layouts
 

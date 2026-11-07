@@ -1,8 +1,9 @@
 {{ $img := .Page.Resources.GetMatch (.Get "src") }}
 {{ if $img }}
-  {{ $webp := $img.Resize "1400x webp q82" }}
-  {{ $jpeg := $img.Resize "1400x jpg q76" }}
-<figure class="screenshot-fig">
+  {{ $w := .Get "width" | default "1400" }}
+  {{ $webp := $img.Resize (printf "%sx webp q82" $w) }}
+  {{ $jpeg := $img.Resize (printf "%sx jpg q76" $w) }}
+<figure class="screenshot-fig"{{ with .Get "width" }} style="max-width: {{ . }}px; margin-left: auto; margin-right: auto;"{{ end }}>
   <picture>
     <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
     <img src="{{ $jpeg.RelPermalink }}" alt="{{ .Get "alt" }}" width="{{ $jpeg.Width }}" height="{{ $jpeg.Height }}" loading="lazy">
